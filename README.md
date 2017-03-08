@@ -1,4 +1,4 @@
-# Her-Story 
+# Tene-Yerushalmi
 
 Helping the Alumni of HaYerushalmit stay in touch with one another.
 
