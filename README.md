@@ -2,7 +2,7 @@
 
 Helping the Alumni of HaYerushalmit stay in touch with one another.
 
-(See also:rRecommended [checklist](https://github.com/ddbeck/readme-checklist/blob/master/checklist.md) for a README) 
+
 
 ![project logo (this one for is taken from basecamp - a project management service)](https://www.klipfolio.com/sites/default/files/integrations/basecamp.png)
 
