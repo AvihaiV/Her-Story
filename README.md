@@ -2,9 +2,9 @@
 
 Helping the Alumni of HaYerushalmit stay in touch with one another.
 
-
+<br />
 <img src="https://cloud.githubusercontent.com/assets/26036841/23697291/e8d7c412-03ef-11e7-97e6-f4363c0060a2.jpg" width="30%"></img>
-
+<br />
 
 
 
