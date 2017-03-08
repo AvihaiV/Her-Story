@@ -2,9 +2,7 @@
 
 Helping the Alumni of HaYerushalmit stay in touch with one another.
 
-
-
-![project logo (this one for is taken from basecamp - a project management service)](https://www.klipfolio.com/sites/default/files/integrations/basecamp.png)
+<img src="https://cloud.githubusercontent.com/assets/26036841/23697291/e8d7c412-03ef-11e7-97e6-f4363c0060a2.jpg" width="18%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105290/2a183f3a-63ae-11e5-9380-50d9f6d8afd6.png" width="18%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105284/26aa7ad4-63ae-11e5-88b7-bc523a095c9f.png" width="18%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105288/28698fae-63ae-11e5-8ba7-a62360a8e8a7.png" width="18%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105283/251b6868-63ae-11e5-9918-b789d9d682ec.png" width="18%"></img> <img src="https://cloud.githubusercontent.com/assets/4307137/10105290/2a183f3a-63ae-11e5-9380-50d9f6d8afd6.png" width="18%"></img> 
 
 ## Tools & Practices
 We're trying to use the best tools and practices in order to produce a quality enginneered product.
