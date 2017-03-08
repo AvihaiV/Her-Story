@@ -9,8 +9,6 @@ Helping the Alumni of HaYerushalmit stay in touch with one another.
 
 
 ## Tools & Practices
-We're trying to use the best tools and practices in order to produce a quality enginneered product.
-(replace 'jce-il/project-template' with your 'username/repo' and register to the relevant services)
 
 |Category|Status|
 |---|---|
@@ -31,7 +29,7 @@ Please visit our wiki for furthur project info:
 
 ### [User Manual](../../wiki/user-manual) (empty for now)
 
-### [Team Page](https://github.com/AvihaiV/Her-Story/wiki#team-page)
+### [Team Page](https://github.com/AvihaiV/Tene-Yerushalmi/wiki#team-page)
 
 ### Project Documents
 - [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
