@@ -14,8 +14,8 @@ Helping the Alumni of HaYerushalmit stay in touch with one another.
 |---|---|
 | Version Control System| git & github |
 | Recommended IDE | [VSCode](https://code.visualstudio.com) |
-| Group Chat | [![Join the chat at https://gitter.im/jce-il/project-template](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/Her-Story/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link) |
-| Github Issues | [![GitHub issues](https://img.shields.io/github/issues/AvihaiV/Her-Story.svg?style=flat)](https://github.com/AvihaiV/Her-Story/issues) |
+| Group Chat | [![Join the chat at https://gitter.im/jce-il/project-template](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/Tene-Yerushalmi/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link) |
+| Github Issues | [![GitHub issues](https://img.shields.io/github/issues/AvihaiV/Tene-Yerushalmi.svg?style=flat)](https://github.com/AvihaiV/Her-Story/issues) |
 
 
 ## Please visit our [live application](https://demo.reactstarterkit.com/)
