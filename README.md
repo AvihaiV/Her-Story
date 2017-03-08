@@ -1,6 +1,6 @@
 # Her-Story 
 
-Helping the Women of Jerusalem to express their creativity and knowledge to the world.
+Helping the Alumni of HaYerushalmit stay in touch with one another.
 
 (See also:rRecommended [checklist](https://github.com/ddbeck/readme-checklist/blob/master/checklist.md) for a README) 
 
