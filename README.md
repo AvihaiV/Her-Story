@@ -29,7 +29,7 @@ Please visit our wiki for furthur project info:
 
 ### [User Manual](../../wiki/user-manual) (empty for now)
 
-### [Team Page](https://github.com/AvihaiV/Tene-Yerushalmi/wiki/Team#team-page)
+### [Team Page](https://github.com/AvihaiV/Tene-Yerushalmi/wiki/Team)
 
 ### Project Documents
 - [Project Idea](docs/idea.pdf) ([Presentation](docs/idea-slides.pdf))
