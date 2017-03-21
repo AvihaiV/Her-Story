@@ -1,0 +1,4 @@
+.boxes > div {
+    min-height: 100px;
+    background-color: #e2a2e2;
+}
