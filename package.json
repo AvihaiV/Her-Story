@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jce-il/project-template/issues"
   },
-  "homepage": "https://github.com/jce-il/project-template#readme"
+  "homepage": "https://github.com/jce-il/project-template#readme",
+  "dependencies": {
+    "angularfire2": "^4.0.0-rc.0",
+    "firebase": "^3.9.0"
+  }
 }

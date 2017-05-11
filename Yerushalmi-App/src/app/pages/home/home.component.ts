@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AngularFire,  FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2';
+ 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private af: AngularFire) {
+      
+  }
 
   ngOnInit() {
   }
