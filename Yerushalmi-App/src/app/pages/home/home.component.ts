@@ -7,9 +7,12 @@ import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} 
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  item: FirebaseObjectObservable<any>;
+  items: FirebaseListObservable<any[]>;
 
-  constructor(private af: AngularFireDatabase) {
-
+  constructor(private afd: AngularFireDatabase) {
+    this.item = afd.object('/item');
+    this.items = afd.list('items');
   }
 
   ngOnInit() {

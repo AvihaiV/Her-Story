@@ -5,5 +5,12 @@
 
 export const environment = {
   production: false,
-  firebase: {}
+  firebase: {
+    apiKey: "AIzaSyBmLsENlNR1NbJAze5vSr5jPttl6O3NCoQ",
+    authDomain: "yerushalmiapp-a7516.firebaseapp.com",
+    databaseURL: "https://yerushalmiapp-a7516.firebaseio.com",
+    projectId: "yerushalmiapp-a7516",
+    storageBucket: "yerushalmiapp-a7516.appspot.com",
+    messagingSenderId: "3015982921"
+  }
 };
