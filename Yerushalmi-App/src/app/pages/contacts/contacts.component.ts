@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
 
-
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
