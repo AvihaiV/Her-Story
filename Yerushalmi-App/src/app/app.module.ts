@@ -16,10 +16,10 @@ import { AboutComponent } from './pages/about/about.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
-   { path: 'Contact List', component: ContactsComponent, pathMatch: 'full' },
-   { path: 'Organization List', component: OrganizationListComponent, pathMatch: 'full'},
+   { path: 'Contact-List', component: ContactsComponent, pathMatch: 'full' },
+   { path: 'Organization-List', component: OrganizationListComponent, pathMatch: 'full'},
    { path: 'Newspaper', component: NewspaperComponent, pathMatch: 'full'},
-   { path: 'Need Something?', component: NeedSomethingComponent, pathMatch: 'full'},
+   { path: 'Need-Something?', component: NeedSomethingComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

@@ -9,6 +9,7 @@ export class NewspaperComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 
