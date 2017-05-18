@@ -13,15 +13,7 @@ import { NeedSomethingComponent } from './pages/need-something/need-something.co
 import { NewspaperComponent } from './pages/newspaper/newspaper.component';
 import { OrganizationListComponent } from './pages/organization-list/organization-list.component';
 import { AboutComponent } from './pages/about/about.component';
-
-const firebaseConfig = {
-    apiKey: 'AIzaSyBmLsENlNR1NbJAze5vSr5jPttl6O3NCoQ',
-    authDomain: 'yerushalmiapp-a7516.firebaseapp.com',
-    databaseURL: 'https://yerushalmiapp-a7516.firebaseio.com',
-    projectId: 'yerushalmiapp-a7516',
-    storageBucket: 'yerushalmiapp-a7516.appspot.com',
-    messagingSenderId: '3015982921'
-};
+import * as firebase from 'firebase/app'; 
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -48,7 +40,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes),
     AngularFireDatabaseModule,
-    //AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase, 'Yerushalmi-App')
   ],
   providers: [],
   bootstrap: [AppComponent]
