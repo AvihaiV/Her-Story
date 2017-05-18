@@ -1,3 +1,31 @@
-<p>
-  contacts works!
-</p>
+<section>
+  <h2>
+    contacts-list:
+  </h2>
+  <p *ngFor = 'let item of contacts | async'>
+      {{ item | json }}
+  </p>
+
+</section>
+
+<label>
+  Name:
+  <input #name>
+</label>
+
+<label>
+  Last Name:
+  <input #lastName>
+</label>
+
+<label>
+  Phone:
+  <input #phone>
+</label>
+
+<label>
+  Email:
+  <input #email>
+</label>
+
+<button (click) = "insertContact(name, lastName, phone, email)">Insert</button>
