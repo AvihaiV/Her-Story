@@ -13,7 +13,10 @@ import { NeedSomethingComponent } from './pages/need-something/need-something.co
 import { NewspaperComponent } from './pages/newspaper/newspaper.component';
 import { OrganizationListComponent } from './pages/organization-list/organization-list.component';
 import { AboutComponent } from './pages/about/about.component';
-import * as firebase from 'firebase/app'; 
+import {LoginComponent} from './login/login/login.component'
+import * as firebase from 'firebase/app';
+import { FooterComponent } from './structure/footer/footer.component'; 
+import { HeaderComponent } from './structure/header/header.component'; 
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -23,6 +26,16 @@ const routes: Routes = [
    { path: 'Need-Something?', component: NeedSomethingComponent, pathMatch: 'full'},
 ];
 
+export const firebaseConfig = {
+    apiKey: "AIzaSyBmLsENlNR1NbJAze5vSr5jPttl6O3NCoQ",
+    authDomain: "yerushalmiapp-a7516.firebaseapp.com",
+    databaseURL: "https://yerushalmiapp-a7516.firebaseio.com",
+    projectId: "yerushalmiapp-a7516",
+    storageBucket: "yerushalmiapp-a7516.appspot.com",
+    messagingSenderId: "3015982921"
+};
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +44,10 @@ const routes: Routes = [
     NeedSomethingComponent,
     NewspaperComponent,
     OrganizationListComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent,
+    FooterComponent,
+    HeaderComponent
   ],
 
   imports: [
@@ -40,7 +56,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes),
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(environment.firebase, 'Yerushalmi-App')
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]

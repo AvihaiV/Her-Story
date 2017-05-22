@@ -12,12 +12,14 @@ export class ContactsComponent implements OnInit {
   contacts: FirebaseListObservable<any[]>;
 
   constructor(private afd: AngularFireDatabase) {
-    this.contacts = afd.list('contactList');
+    this.contacts = this.afd.list("contactList");
+
   }
 
   ngOnInit() { }
 
   insertContact(name, lastName, phone, email) {
+    console.log(name);
     this.contacts.push({
       name: name.value,
       lastName: lastName.value,
