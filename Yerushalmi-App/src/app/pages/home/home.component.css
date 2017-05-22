@@ -1,0 +1,16 @@
+.homecmd
+{
+  width: 100%;
+  height: 100px;
+  margin: 10px 0px;
+
+  background: #ededed;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.contact{ background-image: url(https://github.com/Nir-Cohen/Bishvil/blob/master/mainbtn/hostsha.png?raw=true); }
+.organization{ background-image: url(https://github.com/Nir-Cohen/Bishvil/blob/master/mainbtn/itemdel.png?raw=true); }
+.needs{ background-image: url(https://github.com/Nir-Cohen/Bishvil/blob/master/mainbtn/nl.png?raw=true); }
+.news{ background-image: url(https://github.com/Nir-Cohen/Bishvil/blob/master/mainbtn/chat.png?raw=true); }
