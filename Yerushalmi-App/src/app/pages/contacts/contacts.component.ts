@@ -13,7 +13,6 @@ export class ContactsComponent implements OnInit {
 
   constructor(private afd: AngularFireDatabase) {
     this.contacts = this.afd.list("contactList");
-
   }
 
   ngOnInit() { }
