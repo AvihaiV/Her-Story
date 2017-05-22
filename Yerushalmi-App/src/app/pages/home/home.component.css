@@ -1,3 +1,9 @@
+body
+{
+    background-image: url(); 
+    background-repeat: no-repeat;
+}
+
 .boxes
 {
     text-align: center;
@@ -19,8 +25,8 @@
     text-decoration: none;
     outline: none;
     color: #fff;
-    border: none;
     border-radius: 15px;
+    border: 2px solid goldenrod;
 }
 
 .homecmd:active 
