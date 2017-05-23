@@ -7,24 +7,31 @@ import * as firebase from 'firebase/app';
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.css']
 })
+
 export class ContactsComponent implements OnInit {
+  
+  public items : FirebaseListObservable<any>;
 
-  contacts: FirebaseListObservable<any[]>;
-
-  constructor(private afd: AngularFireDatabase) {
-    this.contacts = this.afd.list("contactList");
+  constructor(private afd: AngularFireDatabase) {     
+      this.items = this.afd.list("contactList");
   }
 
-  ngOnInit() { }
-
-  insertContact(name, lastName, phone, email) {
-    console.log(name);
+  /*
+  insertContact(name, lastName, phone, email, job, hobbies) {
     this.contacts.push({
       name: name.value,
       lastName: lastName.value,
       phone: phone.value,
-      email: email.value
+      email: email.value,
+      job: job.value,
+      hobbies: hobbies.value
     });
   }
+
+  deleteItem(key : string){
+    this.items.remove(key);
+  }
+*/
+  ngOnInit(){ }
 
 }

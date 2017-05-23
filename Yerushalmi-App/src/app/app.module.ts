@@ -13,8 +13,9 @@ import { NeedSomethingComponent } from './pages/need-something/need-something.co
 import { NewspaperComponent } from './pages/newspaper/newspaper.component';
 import { OrganizationListComponent } from './pages/organization-list/organization-list.component';
 import { AboutComponent } from './pages/about/about.component';
-import {LoginComponent} from './login/login/login.component'
+import { LoginComponent } from './login/login/login.component'
 import * as firebase from 'firebase/app';
+import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
    { path: 'Organization-List', component: OrganizationListComponent, pathMatch: 'full'},
    { path: 'Newspaper', component: NewspaperComponent, pathMatch: 'full'},
    { path: 'Need-Something?', component: NeedSomethingComponent, pathMatch: 'full'},
+   { path: 'contact-form', component: ContactFormComponent, pathMatch: 'full'}
 ];
 
 export const firebaseConfig = {
@@ -43,7 +45,8 @@ export const firebaseConfig = {
     NewspaperComponent,
     OrganizationListComponent,
     AboutComponent,
-    LoginComponent
+    LoginComponent,
+    ContactFormComponent
   ],
 
   imports: [

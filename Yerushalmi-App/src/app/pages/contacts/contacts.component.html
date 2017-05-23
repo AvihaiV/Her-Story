@@ -1,8 +1,14 @@
+<div class = "row">
+  <div class = "col-xs-12">
+      <a [routerLink] = "['contact-form']"><button class = "btn btn-success addcmd">Add Contact</button></a>
+  </div>
+</div>
+
 <section>
   <h2>
     contacts-list:
   </h2>
-  <p *ngFor = 'let item of contacts | async'>
+  <p *ngFor = 'let item of items | async'>
       {{ item | json }}
   </p>
 
@@ -29,3 +35,4 @@
 </label>
 
 <button (click) = "insertContact(name, lastName, phone, email)">Insert</button>
+
