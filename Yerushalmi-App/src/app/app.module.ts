@@ -15,8 +15,6 @@ import { OrganizationListComponent } from './pages/organization-list/organizatio
 import { AboutComponent } from './pages/about/about.component';
 import {LoginComponent} from './login/login/login.component'
 import * as firebase from 'firebase/app';
-import { FooterComponent } from './structure/footer/footer.component'; 
-import { HeaderComponent } from './structure/header/header.component'; 
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -45,9 +43,7 @@ export const firebaseConfig = {
     NewspaperComponent,
     OrganizationListComponent,
     AboutComponent,
-    LoginComponent,
-    FooterComponent,
-    HeaderComponent
+    LoginComponent
   ],
 
   imports: [
@@ -58,7 +54,10 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
+
   providers: [],
+  
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
