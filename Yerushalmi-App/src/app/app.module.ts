@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
@@ -13,9 +13,14 @@ import { NeedSomethingComponent } from './pages/need-something/need-something.co
 import { NewspaperComponent } from './pages/newspaper/newspaper.component';
 import { OrganizationListComponent } from './pages/organization-list/organization-list.component';
 import { AboutComponent } from './pages/about/about.component';
-import { LoginComponent } from './login/login/login.component'
 import * as firebase from 'firebase/app';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal/dist';
+import { Ng2AutoCompleteModule } from 'ng2-auto-complete/dist';
+import { DatePickerModule } from 'ng2-datepicker';
+import { DropdownModule } from 'ng2-dropdown';
+import { LoginComponent } from './pages/login/login.component';
+import { AF } from "./providers/af";
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -23,7 +28,8 @@ const routes: Routes = [
    { path: 'Organization-List', component: OrganizationListComponent, pathMatch: 'full'},
    { path: 'Newspaper', component: NewspaperComponent, pathMatch: 'full'},
    { path: 'Need-Something?', component: NeedSomethingComponent, pathMatch: 'full'},
-   { path: 'contact-form', component: ContactFormComponent, pathMatch: 'full'}
+   { path: 'contact-form', component: ContactFormComponent, pathMatch: 'full'},
+   { path: 'login', component: LoginComponent, pathMatch: 'full'}
 ];
 
 export const firebaseConfig = {
@@ -45,8 +51,8 @@ export const firebaseConfig = {
     NewspaperComponent,
     OrganizationListComponent,
     AboutComponent,
-    LoginComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    LoginComponent
   ],
 
   imports: [
@@ -55,10 +61,14 @@ export const firebaseConfig = {
     HttpModule,
     RouterModule.forRoot(routes),
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    DatePickerModule,
+    BootstrapModalModule,
+    Ng2AutoCompleteModule,
+    DropdownModule
   ],
 
-  providers: [],
+  providers: [ AF ],
   
   bootstrap: [AppComponent]
 })
