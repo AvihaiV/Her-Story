@@ -112,6 +112,9 @@ addUserInfo(){
       name: name,
       email: email
     });
-    
   }
+    
+    userLog() {
+      return this.af.authState;
+    }
 }
