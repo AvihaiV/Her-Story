@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -65,7 +66,8 @@ export const firebaseConfig = {
     DatePickerModule,
     BootstrapModalModule,
     Ng2AutoCompleteModule,
-    DropdownModule
+    DropdownModule,
+    AngularFireAuthModule
   ],
 
   providers: [ AF ],
