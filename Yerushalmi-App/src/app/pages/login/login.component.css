@@ -31,3 +31,7 @@
   background-color: #357ae8;
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
+
+.logo img {
+  position: center;
+}
