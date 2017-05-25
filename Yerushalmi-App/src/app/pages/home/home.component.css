@@ -1,58 +1,36 @@
-.boxes
+.well
 {
-    margin: 10px;   
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin-top: 5%;
 }
 
-.homecmd
+.maincmd
 {
-    width: 25%;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    margin: 10px;
-    border-radius: 12px;
-    display: inline-block;
-    text-align: center;
-    transition: all 0.5s;
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    border-radius: 15px;
-    border: 2px solid goldenrod;
-}
-
-.homecmd:active 
-{ 
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  width: 100%;
+  height: 115px;
+  margin: 15px 0px;
+  background: white;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  border-color: brown;
 }
 
 .contact
 { 
     background-image: url(https://github.com/AvihaiV/Tene-Yerushalmi/blob/master/homebtn/contact.jpg?raw=true); 
-    float: left;  
-    margin-left: 310px;
 }
 
 .organization
 { 
     background-image: url(https://github.com/AvihaiV/Tene-Yerushalmi/blob/master/homebtn/organizations.jpg?raw=true); 
-    margin-right: 310px;    
 }
 
 .needs
 { 
     background-image: url(https://github.com/AvihaiV/Tene-Yerushalmi/blob/master/homebtn/needs.jpg?raw=true);  
-    float: left;
-    margin-left: 310px;
 }
 
 .news
 { 
     background-image: url(https://github.com/AvihaiV/Tene-Yerushalmi/blob/master/homebtn/news.jpg?raw=true); 
-    margin-right: 310px;      
 }

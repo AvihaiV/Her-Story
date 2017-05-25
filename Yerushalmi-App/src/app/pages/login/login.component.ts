@@ -11,23 +11,40 @@ import * as firebase from 'firebase';
 
 export class LoginComponent {
   public error: any;
+  mail : any;
 
   constructor(public afService: AF, private router: Router) {}
 
-  loginWithGoogle() {    
+  loginWithGoogle() { 
     this.afService.loginWithGoogle().then((data) => {
-      // Send them to the homepage if they are logged in
-      this.afService.addUserInfo();
+      this.afService.saveUserInfoFromForm(data.user.uid, data.user.displayName, data.user.email);
+      this.afService.addUserInfo(data.user);
+       // Send them to the homepage if they are logged in
       this.router.navigate(['']);
     })
+
+    .catch((error: any) => {
+      if (error) {
+        this.error = error;
+        console.log(this.error);
+      }
+    });
   }
 
   loginWithFacebook() {    
     this.afService.loginWithFacebook().then((data) => {
+      this.afService.saveUserInfoFromForm(data.user.uid, data.user.displayName, data.user.email);
+      this.afService.addUserInfo(data.user);     
       // Send them to the homepage if they are logged in
-      this.afService.addUserInfo();
       this.router.navigate(['']);
     })
+
+    .catch((error: any) => {
+      if (error) {
+        this.error = error;
+        console.log(this.error);
+      }
+    });
   }
 }
 

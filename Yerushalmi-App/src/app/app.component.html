@@ -2,21 +2,24 @@
   <div class="container">
     <div class="row">
       <div class="navbar-header col-xs-5">        
-        <a *ngIf = "isLoggedIn" class="navbar-brand" [routerLink] = "['']">Tene-Yerushalmi App</a>
-        <a *ngIf = "!isLoggedIn" class="navbar-brand">Tene-Yerushalmi App</a>
+        <a *ngIf = "isLoggedIn" class="navbar-brand" [routerLink] = "['']">Tene App</a>
+        <a *ngIf = "!isLoggedIn" class="navbar-brand">Tene App</a>
       </div>
 
       <div *ngIf="isLoggedIn">
         <div class="col-xs-2">   
           <div class="dropdown nav navbar-nav navbar-right" dropdown [dropdownToggle]="true">
-            <div class="btn btn-default navbar-btn" dropdown-open><i class="glyphicon glyphicon-user"></i>
-              <span class="caret"></span>
-            </div>                  
-            <ul class="dropdown-menu">
-              <li> Signed in as<br><a [routerLink] = "['profile']"><strong>{{afService.displayName }}</strong></a></li><hr>
-              <li><a (click)="logout()">Logout</a></li>
-            </ul>
+              <div class="btn btn-default navbar-btn" dropdown-open><i class="glyphicon glyphicon-user"></i>
+                  <span class="caret"></span></div>                  
+              <ul class="dropdown-menu">
+                <li>Signed in as<br><a><strong>{{afService.displayName}}</strong></a></li><hr>
+              </ul>
           </div>
+         </div>
+        <div class="col-xs-2">
+          <ul class="nav navbar-nav navbar-right border-left">
+            <li><a (click)="logout()">Logout</a></li>
+          </ul>
         </div>
       </div>
     </div>

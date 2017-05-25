@@ -1,7 +1,6 @@
-/****** LOGIN MODAL ******/
 .loginmodal-container {
   padding: 30px;
-  max-width: 350px;
+  max-width: 350px; 
   width: 100% !important;
   background-color: #F7F7F7;
   margin: 0 auto;
@@ -11,17 +10,24 @@
   font-family: roboto;
 }
 
+.logo img {
+  margin-bottom: 10%;
+  width: 100%;
+  height: 100%;
+}
+
 .loginmodal-submit {
   /* border: 1px solid #3079ed; */
   width: 100%;
   border: 0px;
+  border-radius: 5%;
   color: #fff;
   text-shadow: 0 1px rgba(0,0,0,0.1);
   background-color: #4d90fe;
-  padding: 11px 0px;
+  padding: 17px 0px;
   font-family: roboto;
   font-size: 21px;
-   background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed));
+  background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed));
 }
 
 .loginmodal-submit:hover {
@@ -32,6 +38,4 @@
   /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
-.logo img {
-  position: center;
-}
+
