@@ -13,7 +13,6 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { NeedSomethingComponent } from './pages/need-something/need-something.component';
 import { NewspaperComponent } from './pages/newspaper/newspaper.component';
 import { OrganizationListComponent } from './pages/organization-list/organization-list.component';
-import { AboutComponent } from './pages/about/about.component';
 import * as firebase from 'firebase/app';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal/dist';
@@ -51,7 +50,6 @@ export const firebaseConfig = {
     NeedSomethingComponent,
     NewspaperComponent,
     OrganizationListComponent,
-    AboutComponent,
     ContactFormComponent,
     LoginComponent
   ],

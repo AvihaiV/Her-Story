@@ -1,38 +1,39 @@
-<div class = "row">
-  <div class = "col-xs-12">
-      <a [routerLink] = "['contact-form']"><button class = "btn btn-success addcmd">Add Contact</button></a>
+<div class = "container">
+  <div class = "row">
+    <div class = "col-xs-12">
+      <a [routerLink] = "['contact-form']"><button class = "btn btn-success addcmd">Add Yourself To Contacts</button></a>
+    </div>
+  </div>
+    
+  <div *ngFor = "let contact of contacts | async">
+    <div class="well well-sm">              
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div *ngIf = "contact.photoURL">
+            <img [src]="contact.photoURL" class="img-rounded img-responsive" />
+          </div>
+                        
+          <div *ngIf = "!contact.photoURL">
+            <img src="https://www.drupal.org/files/profile_default.jpg" class="img-rounded img-responsive" />
+          </div>
+        </div>
+                        
+        <div class="col-sm-6 col-md-8">
+          <h4>{{contact.name}}</h4>
+          <p>
+            <i class="glyphicon glyphicons-luggage"></i>{{contact.job}}
+            <br/>
+            <i class="glyphicon glyphicons-heart"></i>{{contact.hobbies}}
+            <br/>
+            <i class="glyphicon glyphicon-envelope"></i>{{contact.email}}
+            <br/>
+            <i class="glyphicon glyphicons-iphone"></i>{{contact.phone}}
+            <br/>
+          </p>
+        
+          <div *ngIf = "contact.email == afService.email" class = "pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)" title = "Delete"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<section>
-  <h2>
-    contacts-list:
-  </h2>
-  <p *ngFor = 'let item of items | async'>
-      {{ item | json }}
-  </p>
-
-</section>
-
-<label>
-  Name:
-  <input #name>
-</label>
-
-<label>
-  Last Name:
-  <input #lastName>
-</label>
-
-<label>
-  Phone:
-  <input #phone>
-</label>
-
-<label>
-  Email:
-  <input #email>
-</label>
-
-<button (click) = "insertContact(name, lastName, phone, email)">Insert</button>
-

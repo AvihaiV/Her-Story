@@ -11,8 +11,8 @@ export class AF {
   public email: string;
   public item: FirebaseListObservable<any>;
   public news: FirebaseListObservable<any>;
-  public contacts: FirebaseListObservable<any>;
-  public organizations: FirebaseListObservable<any>;
+  public contact: FirebaseListObservable<any>;
+  public organization: FirebaseListObservable<any>;
   public registeredUsers: FirebaseListObservable<any>;
 
   public OK_key:string;
@@ -21,10 +21,10 @@ export class AF {
 
   constructor(public af: AngularFireAuth, public db: AngularFireDatabase) {
     this.targetRef = firebase.storage().ref();
-    this.contacts = this.db.list("contacts");
+    this.contact = this.db.list("contactList");
     this.item = this.db.list("items");
-    this.news = this.db.list("news");
-    this.organizations = this.db.list("organizations");
+    this.news = this.db.list("newspaper");
+    this.organization = this.db.list("organizationList");
   }
 
   addItem(item){
@@ -37,22 +37,22 @@ export class AF {
     }); 
   }
 
-  addContacts(contacts){
-    this.contacts.push({
-      name: contacts.name,
-      lastName: contacts.lastName,
-      phone: contacts.phone,
-      email: contacts.email,
-      job: contacts.job,
-      hobbies: contacts.hobbies
+  addContact(contact){
+    this.contact.push({
+      name: contact.name,
+      phone: contact.phone,
+      email: contact.email,
+      job: contact.job,
+      hobbies: contact.hobbies,
+      photoURL: contact.photoURL
     });
   }
 
-  addOrganizations(organizations){
-    this.news.push({
-      name: organizations.name,
-      contact: organizations.contact,
-      phone: organizations.phone
+  addOrganization(organization){
+    this.organization.push({
+      name: organization.name,
+      contact: organization.contact,
+      phone: organization.phone
     });
   }
 
@@ -86,7 +86,7 @@ export class AF {
   }
 
   /**
-   * save name and email only for me
+   * save name and email of user to use
    */
   addUserInfo(user){
     //this.db.object('registeredUsers/' + firebase.auth().currentUser.uid).update({

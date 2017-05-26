@@ -29,6 +29,7 @@
   font-family: roboto;
   font-size: 21px;
   background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed));
+  cursor: pointer;
 }
 
 .loginmodal-submit:hover {

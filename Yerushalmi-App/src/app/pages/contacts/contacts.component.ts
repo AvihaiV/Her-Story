@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
 import * as firebase from 'firebase/app'; 
+import { AF } from "../../providers/af";
 
 @Component({
   selector: 'app-contacts',
@@ -10,28 +11,21 @@ import * as firebase from 'firebase/app';
 
 export class ContactsComponent implements OnInit {
   
-  public items : FirebaseListObservable<any>;
+  public contacts : FirebaseListObservable<any>;
 
-  constructor(private afd: AngularFireDatabase) {     
-      this.items = this.afd.list("contactList");
+  selected : any;
+  onclick : Function;
+  selectedRow : Number;
+
+  constructor(public afService : AF, public db: AngularFireDatabase) {     
+    this.contacts = this.db.list("contactList");
   }
 
-  /*
-  insertContact(name, lastName, phone, email, job, hobbies) {
-    this.contacts.push({
-      name: name.value,
-      lastName: lastName.value,
-      phone: phone.value,
-      email: email.value,
-      job: job.value,
-      hobbies: hobbies.value
-    });
+  //only user can delete himself
+  deleteContact(key : string){
+    console.log("Removing "+ key);
+    this.contacts.remove(key);
   }
 
-  deleteItem(key : string){
-    this.items.remove(key);
-  }
-*/
   ngOnInit(){ }
-
 }
