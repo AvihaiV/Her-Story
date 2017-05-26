@@ -39,7 +39,8 @@ export class AF {
 
   addContact(contact){
     this.contact.push({
-      name: contact.name,
+      fName: contact.fName,
+      lName: contact.lName,
       phone: contact.phone,
       email: contact.email,
       job: contact.job,

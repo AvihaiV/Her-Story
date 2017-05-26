@@ -4,68 +4,63 @@
 
       <div class="row">
         <div class="col-md-8 col-md-offset-2 well">
-          <form>
-            <div class = "form-group">
-              <label for = "itemType">Full Name</label>
-              <select class = "form-control" id ="itemType" name = "type" [(ngModel)]= 'item.type'>
-                <option></option>
-                <option>Electrics</option>
-                <option>Furniture</option>
-                <option>Home Staff</option>
-                <option>Clothes</option>
-                <option>Other..</option>
-              </select>
-            </div>
+          <form class="form-horizontal">
             
-            <div class = "form-group">
-              <label for = "itemCond">Item Condition</label>
-              <select class = "form-control" id ="itemCond">
-                <option></option>
-                <option>New</option>
-                <option>Almost New</option>
-                <option>Fine Used</option>
-                <option>Badly</option>
-              </select>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name">First Name:</label>
+              <div class="col-sm-10">
+                <input type="name" class="form-control" id="name" placeholder="Enter first name"  name = "fName" [(ngModel)]= 'contact.fName'/>
+              </div>
             </div>
-          
-            <div class = "from-group">
-              <label for = "itemDesc">Item Description</label>
-              <input type = "text" class = "form-control" id = "itemDesc" placeholder="Item Description" name = "description" [(ngModel)]= 'item.description'/>
+
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="name">Last Name:</label>
+              <div class="col-sm-10"> 
+                <input type="name" class="form-control" id="name" placeholder="Enter last name"  name = "lName" [(ngModel)]= 'contact.lName'/>
+              </div>
             </div>
-          
-            <br>
           
             <div class="form-group">
-              <label for="location">Item Location</label>
-              <input type="text" class="form-control" id="location" name = "location" [(ngModel)]= 'item.location'/>
+              <label class="control-label col-sm-2" for="job">Gob:</label>
+              <div class="col-sm-10"> 
+                <input type="text" class="form-control" id="job" placeholder="Enter job"  name = "job" [(ngModel)]= 'contact.job'/>
+              </div>
             </div>
-            
-            <br>
 
-            <fieldset class="form-group">
-              <legend>Contact Information:</legend>
-              <div class="form-group">
-                <label for="location">Phone number</label>
-                <input type="text" class="form-control" id="phone" name = "phone" [(ngModel)]= 'item.phone'/>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="hobbies">Hobbies:</label>
+              <div class="col-sm-10"> 
+                <input type="text" class="form-control" id="hobbies" placeholder="Enter hobbies"  name = "hobbies" [(ngModel)]= 'contact.hobbies'/>
               </div>
-               
-              <div class="form-group">
-                <label for="location">Email</label>
-                <input type="text" class="form-control" id="email" name = "email" [(ngModel)]= 'item.email'/>
+            </div>
+              
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email:</label>
+              <div class="col-sm-10"> 
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name = "email" [(ngModel)]= 'item.email'/>
               </div>
-            </fieldset>
+            </div>
           
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="phone">Phone:</label>
+              <div class="col-sm-10"> 
+                <input type="number" class="form-control" id="phone" placeholder="Enter phone" name = "phone" [(ngModel)]= 'item.phone'/>
+              </div>
+            </div>
+
             <div class="form-group">            
               <label class ="control-label custom-file-upload">Browse Photo
                 <input type="file" accept="image/*" (change) ="upload($event)" size="50"/>
               </label>
             </div>     
 
-            <input type="button" class="btn btn-primary"  [routerLink]="['/items']" value="Add Item" (click)="addItem()" />
-            <button type="reset" class="btn btn-danger">Reset Form</button>
-
+            <input type="button" class="btn btn-primary"  [routerLink]="['contacts']" value="Add Contact" (click)="addContact()" />
+            <button type="reset" class="btn btn-danger">Reset</button>
         </form>
       </div>
     </div>
   </div>
 </div>
+
+
+  

@@ -1,7 +1,7 @@
 <div class = "container">
   <div class = "row">
     <div class = "col-xs-12">
-      <a [routerLink] = "['contact-form']"><button class = "btn btn-success addcmd">Add Yourself To Contacts</button></a>
+      <a [routerLink] = "['/contact-form']"><button class = "btn btn-success addcmd">Add Yourself :)</button></a>
     </div>
   </div>
     
@@ -19,7 +19,7 @@
         </div>
                         
         <div class="col-sm-6 col-md-8">
-          <h4>{{contact.name}}</h4>
+          <h4>{{contact.fName}} , {{contact.lName}}</h4>
           <p>
             <i class="glyphicon glyphicons-luggage"></i>{{contact.job}}
             <br/>

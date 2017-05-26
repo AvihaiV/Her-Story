@@ -17,8 +17,8 @@ export class ContactsComponent implements OnInit {
   onclick : Function;
   selectedRow : Number;
 
-  constructor(public afService : AF, public db: AngularFireDatabase) {     
-    this.contacts = this.db.list("contactList");
+  constructor(public afService : AF) {     
+    this.contacts = this.afService.contact;
   }
 
   //only user can delete himself
