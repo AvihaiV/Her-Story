@@ -13,10 +13,6 @@ export class ContactsComponent implements OnInit {
   
   public contacts : FirebaseListObservable<any>;
 
-  selected : any;
-  onclick : Function;
-  selectedRow : Number;
-
   constructor(public afService : AF) {     
     this.contacts = this.afService.contact;
   }
@@ -26,16 +22,6 @@ export class ContactsComponent implements OnInit {
     console.log("Removing "+ key);
     this.contacts.remove(key);
   }
-/*
-  editContact(key : string)
-  {
 
-  }
-*/
-  ngOnInit(){ 
-    this.onclick = function(event : MouseEvent,i : any){
-      console.log(event.target);
-      this.selectedRow = i;
-    };
-  }
+  ngOnInit(){ }
 }

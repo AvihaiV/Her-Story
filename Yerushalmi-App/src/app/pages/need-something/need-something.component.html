@@ -1,3 +1,22 @@
-<p>
-  need-something works!
-</p>
+<div class = "container">
+  <div class = "row">
+    <div class = "col-xs-12">
+      <a [routerLink] = "['/needs-form']"><button class = "btn btn-success addcmd">Add Item</button></a>
+    </div>
+  </div>
+    
+  <div class = "list-group" *ngFor = "let item of items | async">
+    <a class="list-group-item clearfix" [class.list-group-item-success] = "i == selectedRow">
+      <h4 class="list-group-item-heading">{{item.description}}</h4> 
+      <h6 class="list-group-item-text">Publisher:  {{item.author}}</h6>
+      <p class="list-group-item-text">
+        <br>Contact info: <br> {{item.email}} <br> {{item.phone}}
+      </p>
+      <div *ngIf="item.photoURL">
+        <img [src]= "item.photoURL" class="img-thumbnail" width="150" height="150">
+      </div>
+      
+      <div *ngIf = "item.email == afService.email" class = "pull-right glyphicon glyphicon-trash" (click)="deleteItem(item.$key)" title = "Delete"></div>
+    </a>
+  </div>
+</div>

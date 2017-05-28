@@ -1,0 +1,38 @@
+<div class = "container">
+  <div [hidden]="submitted">
+    <h3 style="text-align: center">New Item</h3>
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 well">
+        <form>
+          <div class = "from-group">
+            <label for = "itemDesc">Description:</label>
+            <input type = "text" class = "form-control" id = "itemDesc" placeholder="Enter Description" name = "description" [(ngModel)]= 'item.description'/>
+          </div>
+          <br>
+
+          <fieldset class="form-group">
+              <legend>Contact Information:</legend>
+                <div class="form-group">
+                  <label for="phone">Phone number</label>
+                  <input type="text" class="form-control" id="phone" name = "phone" [(ngModel)]= 'item.phone'/>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" id="email" name = "email" [(ngModel)]= 'item.email'/>
+                </div>
+          </fieldset>
+          
+          <div class="form-group">            
+            <label class ="control-label custom-file-upload">Browse Photo
+              <input type="file" accept="image/*" (change) ="upload($event)" size="50"/>
+            </label>
+          </div>     
+
+          <input type="button" class="btn btn-primary"  [routerLink]="['/Need-Something?']" value="Add Item" (click)="addItem()" />
+          <button type="reset" class="btn btn-danger">Reset Form</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

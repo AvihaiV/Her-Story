@@ -21,6 +21,8 @@ import { DatePickerModule } from 'ng2-datepicker';
 import { DropdownModule } from 'ng2-dropdown';
 import { LoginComponent } from './pages/login/login.component';
 import { AF } from "./providers/af";
+import { NeedsFormComponent } from './pages/needs-form/needs-form.component';
+import { OrganizationFormComponent } from './pages/organization-form/organization-form.component';
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -29,7 +31,9 @@ const routes: Routes = [
    { path: 'Newspaper', component: NewspaperComponent, pathMatch: 'full'},
    { path: 'Need-Something?', component: NeedSomethingComponent, pathMatch: 'full'},
    { path: 'contact-form', component: ContactFormComponent, pathMatch: 'full'},
-   { path: 'login', component: LoginComponent, pathMatch: 'full'}
+   { path: 'login', component: LoginComponent, pathMatch: 'full'},
+   { path: 'needs-form', component: NeedsFormComponent, pathMatch: 'full'},
+   { path: 'organization-form', component: OrganizationFormComponent, pathMatch: 'full'}
 ];
 
 export const firebaseConfig = {
@@ -41,7 +45,6 @@ export const firebaseConfig = {
     messagingSenderId: "3015982921"
 };
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +54,9 @@ export const firebaseConfig = {
     NewspaperComponent,
     OrganizationListComponent,
     ContactFormComponent,
-    LoginComponent
+    LoginComponent,
+    NeedsFormComponent,
+    OrganizationFormComponent
   ],
 
   imports: [

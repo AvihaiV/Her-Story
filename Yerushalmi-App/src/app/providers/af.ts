@@ -93,7 +93,7 @@ export class AF {
   addUserInfo(user){
     this.displayName =  user.displayName;
     this.email = user.email;
-    this.photoURL = user.photoURL;;
+    this.photoURL = user.photoURL;
   }
 
   /**

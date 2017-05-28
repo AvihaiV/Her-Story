@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} from 'angularfire2/database';
+import * as firebase from 'firebase/app'; 
+import { AF } from "../../providers/af";
 
 @Component({
   selector: 'app-organization-list',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganizationListComponent implements OnInit {
 
-  constructor() { }
+ public organizations : FirebaseListObservable<any>;
 
-  ngOnInit() {
+  constructor(public afService : AF) {     
+    this.organizations = this.afService.organization;
   }
 
+  //only user can delete himself
+  deleteOrganization(key : string){
+    console.log("Removing "+ key);
+    this.organizations.remove(key);
+  }
+
+  ngOnInit(){ }
 }

@@ -1,3 +1,25 @@
-<p>
-  organization-list works!
-</p>
+<div class="container">  
+  <div class = "row">
+    <div class = "col-xs-12">
+      <a [routerLink] = "['/organization-form']"><button class = "btn btn-success addcmd">Add Organization</button></a>
+    </div>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let organization of organizations | async">
+      <tr>
+        <td>{{organization.name}}</td>
+        <td>{{organization.contact}}</td>
+        <td>{{organization.phone}}</td>
+        <div class = "pull-right glyphicon glyphicon-trash" (click)="deleteOrganization(organization.$key)" title = "Delete"></div>
+      </tr>
+    </tbody>
+  </table>
+</div>
