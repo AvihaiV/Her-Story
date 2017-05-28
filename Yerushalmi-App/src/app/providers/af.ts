@@ -9,6 +9,8 @@ import {FirebaseObjectFactoryOpts} from "angularfire2/interfaces";
 export class AF {
   public displayName: string;
   public email: string;
+  public photoURL : any;
+  public id : string;
   public item: FirebaseListObservable<any>;
   public news: FirebaseListObservable<any>;
   public contact: FirebaseListObservable<any>;
@@ -39,8 +41,7 @@ export class AF {
 
   addContact(contact){
     this.contact.push({
-      fName: contact.fName,
-      lName: contact.lName,
+      name: contact.name,
       phone: contact.phone,
       email: contact.email,
       job: contact.job,
@@ -90,9 +91,9 @@ export class AF {
    * save name and email of user to use
    */
   addUserInfo(user){
-    //this.db.object('registeredUsers/' + firebase.auth().currentUser.uid).update({
     this.displayName =  user.displayName;
     this.email = user.email;
+    this.photoURL = user.photoURL;;
   }
 
   /**
@@ -101,10 +102,11 @@ export class AF {
    * @param model
    * @returns {firebase.Promise<void>}
    */
-  saveUserInfoFromForm(uid, name, email) {
+  saveUserInfoFromForm(uid, name, email, photoURL) {
     return this.db.object('registeredUsers/' + uid).update({
       name: name,
-      email: email
+      email: email,
+      photoURL : "https://www.drupal.org/files/profile_default.jpg",
     });
   }
 

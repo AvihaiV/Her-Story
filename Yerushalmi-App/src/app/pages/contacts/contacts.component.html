@@ -19,18 +19,18 @@
         </div>
                         
         <div class="col-sm-6 col-md-8">
-          <h4>{{contact.fName}} , {{contact.lName}}</h4>
+          <h4>{{contact.name}}</h4>
           <p>
-            <i class="glyphicon glyphicons-luggage"></i>{{contact.job}}
+            <i class="glyphicon glyphicon-briefcase"></i> {{contact.job}}
             <br/>
-            <i class="glyphicon glyphicons-heart"></i>{{contact.hobbies}}
+            <i class="glyphicon glyphicon-heart"></i> {{contact.hobbies}}
             <br/>
-            <i class="glyphicon glyphicon-envelope"></i>{{contact.email}}
+            <i class="glyphicon glyphicon-envelope"></i> {{contact.email}}
             <br/>
-            <i class="glyphicon glyphicons-iphone"></i>{{contact.phone}}
+            <i class="glyphicon glyphicon-phone"></i> {{contact.phone}}
             <br/>
           </p>
-        
+
           <div *ngIf = "contact.email == afService.email" class = "pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)" title = "Delete"></div>
         </div>
       </div>

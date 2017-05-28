@@ -14,13 +14,14 @@ export class ContactFormComponent implements OnInit {
   targetRef: any;
   storageRef: any;
 
-  constructor(public afService : AF,  public db: AngularFireDatabase) { 
+  constructor(public afService : AF) { 
      this.storageRef = firebase.storage().ref();
   }
 
   ngOnInit() { 
-    this.contact = { fName: "", lName: "", job: "" , hobbies : "" ,photoURL :"", phone:"", email:""};
+    this.contact = { name: "", job: "" , hobbies : "" ,photoURL : "", phone: "", email: "" };
     firebase.database().ref('registeredUsers/' + firebase.auth().currentUser.uid).once('value').then((snapshot) => {
+        this.contact.name = snapshot.val().name;
         this.contact.email = snapshot.val().email;        
     });
   }
@@ -32,9 +33,10 @@ export class ContactFormComponent implements OnInit {
 
   //setup path to upload
   upload(event:any){
-      let targetFile = event.srcElement.files[0];
-      let fbsPath = 'images/contacts/' + targetFile.name;
-      this.uploadFile(fbsPath,targetFile);
+    alert("Please wait while uploading!");
+    let targetFile = event.srcElement.files[0];
+    let fbsPath = 'images/contacts/' + targetFile.name;
+    this.uploadFile(fbsPath,targetFile);
   }
 
   //upload to firebase
@@ -65,8 +67,7 @@ export class ContactFormComponent implements OnInit {
 
 //contact struct
 export class contact{
-    fName : String;
-    lName : String;
+    name : String;
     job : String;
     hobbies : String;
     photoURL : String;

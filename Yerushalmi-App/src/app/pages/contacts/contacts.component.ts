@@ -26,6 +26,16 @@ export class ContactsComponent implements OnInit {
     console.log("Removing "+ key);
     this.contacts.remove(key);
   }
+/*
+  editContact(key : string)
+  {
 
-  ngOnInit(){ }
+  }
+*/
+  ngOnInit(){ 
+    this.onclick = function(event : MouseEvent,i : any){
+      console.log(event.target);
+      this.selectedRow = i;
+    };
+  }
 }
