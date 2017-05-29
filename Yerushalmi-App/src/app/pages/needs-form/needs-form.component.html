@@ -1,13 +1,13 @@
 <div class = "container">
-  <div [hidden]="submitted">
+  <div >
     <h3 style="text-align: center">New Item</h3>
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2 well">
         <form>
           <div class = "from-group">
-            <label for = "itemDesc">Description:</label>
-            <input type = "text" class = "form-control" id = "itemDesc" placeholder="Enter Description" name = "description" [(ngModel)]= 'item.description'/>
+            <label for = "description">Description:</label>
+            <input type = "text" class = "form-control" id = "description" placeholder="Enter Description" name = "description" [(ngModel)]= 'item.description'/>
           </div>
           <br>
 
