@@ -31,6 +31,7 @@ export class LoginComponent {
     });
   }
 
+
   loginWithFacebook() {    
     this.afService.loginWithFacebook().then((data) => {
       this.afService.saveUserInfoFromForm(data.user.uid, data.user.displayName, data.user.email, data.user.photoURL);
