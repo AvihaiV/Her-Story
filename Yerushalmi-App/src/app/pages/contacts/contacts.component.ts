@@ -9,6 +9,7 @@ import { AF } from "../../providers/af";
   styleUrls: ['./contacts.component.css']
 })
 
+
 export class ContactsComponent implements OnInit {
   
   public contacts : FirebaseListObservable<any>;
@@ -24,4 +25,9 @@ export class ContactsComponent implements OnInit {
   }
 
   ngOnInit(){ }
+}
+
+export class SearchPipe {
+
+    
 }

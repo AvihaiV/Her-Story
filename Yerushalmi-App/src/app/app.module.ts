@@ -23,6 +23,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { AF } from "./providers/af";
 import { NeedsFormComponent } from './pages/needs-form/needs-form.component';
 import { OrganizationFormComponent } from './pages/organization-form/organization-form.component';
+import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -70,7 +72,9 @@ export const firebaseConfig = {
     BootstrapModalModule,
     Ng2AutoCompleteModule,
     DropdownModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
 
   providers: [ AF ],

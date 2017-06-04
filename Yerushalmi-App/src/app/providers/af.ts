@@ -10,7 +10,6 @@ export class AF {
   public displayName: string;
   public email: string;
   public photoURL : any;
-  public id : string;
   public item: FirebaseListObservable<any>;
   public news: FirebaseListObservable<any>;
   public contact: FirebaseListObservable<any>;
