@@ -18,8 +18,7 @@ Helping the Alumni of HaYerushalmit stay in touch with one another.
 | Github Issues | [![GitHub issues](https://img.shields.io/github/issues/AvihaiV/Tene-Yerushalmi.svg?style=flat)](https://github.com/AvihaiV/Her-Story/issues) |
 
 
-## Please visit our [live application](https://demo.reactstarterkit.com/)
-- Alright, currently only a landing page...
+## Please visit our [Yerushalmi App](https://yerushalmiapp-a7516.firebaseapp.com/login)
 
 
 ## Disclaimer
