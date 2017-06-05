@@ -16,7 +16,7 @@
         <img [src]= "item.photoURL" class="img-thumbnail" width="150" height="150">
       </div>
       
-      <div *ngIf = "item.email == afService.email" class = "pull-right glyphicon glyphicon-trash" (click)="deleteItem(item.$key)" title = "Delete"></div>
+      <div *ngIf = "item.author == afService.displayName" class = "pull-right glyphicon glyphicon-trash" (click)="deleteItem(item.$key)" title = "Delete"></div>
     </a>
   </div>
 </div>

@@ -19,7 +19,7 @@ export class ContactFormComponent implements OnInit {
   }
 
   ngOnInit() { 
-    this.contact = { name: "", job: "" , hobbies : "" ,photoURL : "", phone: "", email: "" };
+    this.contact = { name: "", job: "" , hobbies: "" ,photoURL: "", phone: "", email: "", residence: "", trip: "", social: "", yearbook: "" };
     firebase.database().ref('registeredUsers/' + firebase.auth().currentUser.uid).once('value').then((snapshot) => {
         this.contact.name = snapshot.val().name;
         this.contact.email = snapshot.val().email;        
@@ -67,10 +67,14 @@ export class ContactFormComponent implements OnInit {
 
 //contact struct
 export class contact{
-    name : String;
-    job : String;
-    hobbies : String;
-    photoURL : String;
+    name: String;
+    job: String;
+    hobbies: String;
+    photoURL: String;
     phone: String;
     email: String;
+    residence: String;
+    trip: String;
+    social: String;
+    yearbook: String;
 }

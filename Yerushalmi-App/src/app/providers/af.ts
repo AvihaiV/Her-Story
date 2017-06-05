@@ -45,7 +45,11 @@ export class AF {
       email: contact.email,
       job: contact.job,
       hobbies: contact.hobbies,
-      photoURL: contact.photoURL
+      photoURL: contact.photoURL,
+      residence: contact.residence,
+      trip: contact.trip,
+      social: contact.social,
+      yearbook: contact.yearbook
     });
   }
 

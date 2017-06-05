@@ -1,26 +1,11 @@
+<!-- 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <a [routerLink]="['/contact-form']"><button class = "btn btn-success addcmd">Add Yourself :)</button></a>
     </div>
   </div>
-<!--
-  <md-input-container>
-    <input type="text" mdInput [mdAutocomplete]="auto">
-  </md-input-container>
 
-  <md-autocomplete #auto="mdAutocomplete">
-    <md-option *ngFor="let contact of contacts | async" [value]="contact.name">
-      {{ contact.name }}
-    </md-option>
-    <md-option value='eran'>
-      eran
-    </md-option>
-    <md-option value='hodya'>
-      hodya
-    </md-option>
-  </md-autocomplete>
--->
   <div *ngFor="let contact of contacts | async">
     <div class="well well-sm">
       <div class="row">
@@ -49,6 +34,66 @@
 
           <div *ngIf="contact.email == afService.email" class="pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)"
             title="Delete"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <a [routerLink]="['/contact-form']"><button class = "btn btn-success addcmd">Add Yourself :)</button></a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <label for="filter">Filter by name:</label>
+      <div ng2-auto-complete [source]="nameList" placeholder="Look for user" (valueChanged)="getFilteredNames($event)">
+        <input id="searchclear" [ngModel]="model1" name="filter" autocomplete="off" />
+        <span class="glyphicon glyphicon-remove-circle" (click)="clearInput()"></span>
+      </div>
+      
+      <div *ngFor="let contact of filteredList | async">
+        <div class="well well-sm">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div *ngIf="contact.photoURL">
+                <img [src]="contact.photoURL" class="img-rounded img-responsive" />
+              </div>
+
+              <div *ngIf="!contact.photoURL">
+                <img src="https://www.drupal.org/files/profile_default.jpg" class="img-rounded img-responsive" />
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-8">
+              <h4>{{contact.name}}</h4>
+              <p>
+                <i class="glyphicon glyphicon-bookmark"></i>Yearbook:  {{contact.yearbook}}
+                <br/>
+                <i class="glyphicon glyphicon-briefcase"></i>Job:   {{contact.job}}
+                <br/>
+                <i class="glyphicon glyphicon-thumbs-up"></i>Social initiative:   {{contact.social}}
+                <br/>
+                <i class="glyphicon glyphicon-heart"></i>Hobbies:   {{contact.hobbies}}
+                <br/>
+                <i class="glyphicon glyphicon-plane"></i>Trip:   {{contact.trip}}
+                <br/>
+                <i class="glyphicon glyphicon-home"></i>Residence:   {{contact.residence}}
+                <br/>
+                <i class="glyphicon glyphicon-envelope"></i>Email:   {{contact.email}}
+                <br/>
+                <i class="glyphicon glyphicon-phone"></i>Phone:   {{contact.phone}}
+                <br/>
+              </p>
+
+              <div *ngIf="contact.name == afService.displayName" class="pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)"
+                title="Delete"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
