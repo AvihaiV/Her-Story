@@ -18,8 +18,10 @@ export class NeedSomethingComponent implements OnInit {
 
   //only user can delete himself
   deleteItem(key : string){
-    console.log("Removing "+ key);
-    this.items.remove(key);
+    if(confirm("Are You sure you want to delete?"))
+    {
+      this.items.remove(key);
+    }
   }
 
   ngOnInit(){ }

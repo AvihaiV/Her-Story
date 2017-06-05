@@ -18,8 +18,10 @@ export class OrganizationListComponent implements OnInit {
 
   //only user can delete himself
   deleteOrganization(key : string){
-    console.log("Removing "+ key);
-    this.organizations.remove(key);
+    if(confirm("Are You sure you want to delete?"))
+    {
+      this.organizations.remove(key);
+    }
   }
 
   ngOnInit(){ }

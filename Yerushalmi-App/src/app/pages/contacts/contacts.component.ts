@@ -40,13 +40,13 @@ export class ContactsComponent implements OnInit {
 
 
   clearInput() {
-    this.model1 = "";
+    this.model1 = " ";
     this.getFilteredNames("");
   };
 
   //only user can delete himself
   deleteContact(key: string) {
-    if(confirm("Are You sure you want to delete " + name +"?"))
+    if(confirm("Are You sure you want to delete?"))
     {
       this.contacts.remove(key);
     }
