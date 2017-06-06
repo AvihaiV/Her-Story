@@ -5,6 +5,7 @@ import { AF } from "../../providers/af";
 import { DialogService } from "ng2-bootstrap-modal";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 
 @Component({
   selector: 'app-contacts',
@@ -31,16 +32,17 @@ export class ContactsComponent implements OnInit {
   };
 
   getFilteredList(name): Observable<any[]> {
-    if (name == undefined || name == "" || name == "(none)")
+    //if (name == undefined || name == "" || name == "(none)")
+    if (!name)
       return this.db.list("contactList");
 
     else
-      return this.db.list('contactList').map(_contact => _contact.filter(contact => contact.name == name))
+      return this.db.list('contactList').map(_user => _user.filter(user => user.name == name))
   };
 
 
   clearInput() {
-    this.model1 = " ";
+    this.model1 = "";
     this.getFilteredNames("");
   };
 
@@ -53,7 +55,6 @@ export class ContactsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.nameList.push("(none)");
     firebase.database().ref("contactList/").orderByValue().on("value", (data) => {
       data.forEach((snap) => {
         if (snap.val().name != "" && snap.val().name != undefined)

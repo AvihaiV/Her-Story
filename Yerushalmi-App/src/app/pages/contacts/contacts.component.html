@@ -1,11 +1,11 @@
-<!-- 
+<!--
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <a [routerLink]="['/contact-form']"><button class = "btn btn-success addcmd">Add Yourself :)</button></a>
     </div>
   </div>
-
+  
   <div *ngFor="let contact of contacts | async">
     <div class="well well-sm">
       <div class="row">
@@ -41,6 +41,7 @@
 </div>
 -->
 
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -50,9 +51,9 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6">
-      <label for="filter">Filter by name:</label>
-      <div ng2-auto-complete [source]="nameList" placeholder="Look for user" (valueChanged)="getFilteredNames($event)">
-        <input id="searchclear" [ngModel]="model1" name="filter" autocomplete="on" />
+      <label for="filter">Search by name:</label>
+      <div ng2-auto-complete [source]="nameList" placeholder="Look for contact" (valueChanged)="getFilteredNames($event)">
+        <input id="filter" [ngModel]="model1" name="aaa" autocomplete="off" placeholder="Enter search term" />
         <span class="glyphicon glyphicon-remove-circle" (click)="clearInput()"></span>
       </div>
       
