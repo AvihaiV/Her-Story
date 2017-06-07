@@ -1,3 +1,7 @@
 .border-left {
   border-left: solid 1px;
 }
+
+.nav {
+  cursor: pointer;
+}
