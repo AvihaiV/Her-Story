@@ -40,7 +40,7 @@ Please visit our wiki for furthur project info:
 - [Iteration 0 - ZFR](../../wiki/Iteration-0---ZFR)
 - [Iteration 1 - MVP](https://github.com/AvihaiV/Tene-Yerushalmi/wiki/Iteration-1---MVP)
 - [Iteration 2 -  Contact List & Organization List](https://github.com/AvihaiV/Tene-Yerushalmi/wiki/Iteration-2---Contact-List-&-Organization-List)
-- [Iteration 3 - Feature Y]()
+- [Iteration 3 - Feature Y](https://github.com/AvihaiV/Tene-Yerushalmi/wiki/Iteration-3-Need-Something-&-Newspaper)
 - [Iteration 4 - Feature Z]()
 
 
