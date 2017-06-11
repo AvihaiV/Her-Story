@@ -1,7 +1,13 @@
+/*
 .border-left {
   border-left: solid 1px;
 }
+*/
 
+.dropdown-menu
+{
+  text-align: center;
+}
 .nav {
   cursor: pointer;
 }

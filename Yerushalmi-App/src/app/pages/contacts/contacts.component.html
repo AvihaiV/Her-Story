@@ -51,9 +51,9 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6">
-      <label for="filter">Search by name:</label>
+<!--      <label for="filter">Search by name:</label>   -->
       <div ng2-auto-complete [source]="nameList" placeholder="Look for contact" (valueChanged)="getFilteredNames($event)">
-        <input id="filter" [ngModel]="model1" name="aaa" autocomplete="off" placeholder="Enter search term" />
+        <input id="filter" [ngModel]="model1" name="aaa" autocomplete="off" placeholder="Enter search name" />
         <span class="glyphicon glyphicon-remove-circle" (click)="clearInput()"></span>
       </div>
       

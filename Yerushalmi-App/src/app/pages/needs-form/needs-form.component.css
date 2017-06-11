@@ -3,9 +3,11 @@ input[type="file"] {
 }
 
 .custom-file-upload {
-    padding: 10px 30px ;
+    margin-left: 2%;
+    text-align: center;
+    padding: 10px 10px;
     cursor: pointer;
-    background-color: #337ab7;
+    background-color:greenyellow;
     color: white;
     border-radius: 5px;
 }

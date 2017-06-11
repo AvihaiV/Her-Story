@@ -1,7 +1,6 @@
 <div *ngIf="error" class="alert alert-warning" role="alert">
   <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-  <span class="sr-only">Error:</span>
-  {{error}}
+  <span class="sr-only">Error:</span> {{error}}
 </div>
 
 <div class="modal-dialog">
@@ -12,10 +11,45 @@
 
 	  <br>
 
-    <button class="login loginmodal-submit" (click)="loginWithGoogle()">Login With Google</button>
+    <div class = "google">
+      <button class="login loginmodal-submit" (click)="loginWithGoogle()">Sign In With Google</button>
+    </div>
     <hr>
     
-    <button class="login loginmodal-submit" (click)="loginWithFacebook()">Login With Facebook</button>
+    <div class="facebook">
+      <button class="login loginmodal-submit" (click)="loginWithFacebook()">Sign In With Facebook</button>
+    </div>
     <hr>
+ 
   </div>
 </div>
+
+
+<!--
+<div class="modal-dialog">
+  <div class="loginmodal-container">
+    <div class="logo">
+      <img src="https://github.com/AvihaiV/Tene-Yerushalmi/blob/master/logo.png?raw=true" />
+    </div>
+
+    <div class="omb_login">
+      <div class="row omb_row-sm-offset-3 omb_socialButtons">
+
+        <button class="btn btn-lg btn-block omb_btn-google" (click)="loginWithGoogle()">
+          <i class="fa fa-google-plus visible-xs"></i>
+          <span class="hidden-xs">Google</span>
+        </button>
+        
+        <hr>
+        
+        <button class="btn btn-lg btn-block omb_btn-facebook" (click)="loginWithFacebook()">
+			    <i class="fa fa-facebook visible-xs"></i>
+			    <span class="hidden-xs">Facebook</span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+-->

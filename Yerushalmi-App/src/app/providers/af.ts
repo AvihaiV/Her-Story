@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireAuthProvider, AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase';
-import {FirebaseObjectFactoryOpts} from "angularfire2/interfaces";
+import {FirebaseObjectFactoryOpts} from 'angularfire2/interfaces';
 
 @Injectable()
 
@@ -26,6 +26,7 @@ export class AF {
     this.item = this.db.list("items");
     this.news = this.db.list("newspaper");
     this.organization = this.db.list("organizationList");
+    this.logout();
   }
 
   addItem(item){
