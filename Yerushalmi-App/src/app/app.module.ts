@@ -25,6 +25,7 @@ import { NeedsFormComponent } from './pages/needs-form/needs-form.component';
 import { OrganizationFormComponent } from './pages/organization-form/organization-form.component';
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PdfViewerComponent } from 'ng2-pdf-viewer';
 
 const routes: Routes = [
    { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -58,7 +59,8 @@ export const firebaseConfig = {
     ContactFormComponent,
     LoginComponent,
     NeedsFormComponent,
-    OrganizationFormComponent
+    OrganizationFormComponent,
+    PdfViewerComponent
   ],
 
   imports: [

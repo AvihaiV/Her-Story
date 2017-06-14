@@ -31,6 +31,8 @@
     "ng2-bootstrap": "^1.6.3",
     "ng2-datepicker": "^1.8.3",
     "ng2-dropdown": "0.0.21",
+    "ng2-pdf-viewer": "^1.1.0",
+    "pdfjs-dist": "^1.8.448",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

@@ -1,47 +1,3 @@
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <a [routerLink]="['/contact-form']"><button class = "btn btn-success addcmd">Add Yourself :)</button></a>
-    </div>
-  </div>
-  
-  <div *ngFor="let contact of contacts | async">
-    <div class="well well-sm">
-      <div class="row">
-        <div class="col-sm-6 col-md-4">
-          <div *ngIf="contact.photoURL">
-            <img [src]="contact.photoURL" class="img-rounded img-responsive" />
-          </div>
-
-          <div *ngIf="!contact.photoURL">
-            <img src="https://www.drupal.org/files/profile_default.jpg" class="img-rounded img-responsive" />
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-md-8">
-          <h4>{{contact.name}}</h4>
-          <p>
-            <i class="glyphicon glyphicon-briefcase"></i> {{contact.job}}
-            <br/>
-            <i class="glyphicon glyphicon-heart"></i> {{contact.hobbies}}
-            <br/>
-            <i class="glyphicon glyphicon-envelope"></i> {{contact.email}}
-            <br/>
-            <i class="glyphicon glyphicon-phone"></i> {{contact.phone}}
-            <br/>
-          </p>
-
-          <div *ngIf="contact.email == afService.email" class="pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)"
-            title="Delete"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -64,11 +20,11 @@
           <div class="row">
             <div class="col-sm-6 col-md-4">
               <div *ngIf="contact.photoURL">
-                <img [src]="contact.photoURL" class="img-rounded img-responsive" />
+                <img [src]="contact.photoURL" class="img-rounded img-responsive" width="200" height="200" />
               </div>
 
               <div *ngIf="!contact.photoURL">
-                <img src="https://www.drupal.org/files/profile_default.jpg" class="img-rounded img-responsive" />
+                <img src="https://www.drupal.org/files/profile_default.jpg" class="img-rounded img-responsive" width="200" height="200"/>
               </div>
             </div>
 
@@ -85,7 +41,7 @@
                 
                 <p> <i class="glyphicon glyphicon-plane"></i>   Trip:  {{contact.trip}} </p>
 
-                <p> <i class="glyphicon glyphicon-home"></i>   Residence:  {{contact.residence}} </p>
+                <p> <i class="glyphicon glyphicon-map-marker"></i>   Residence:  {{contact.residence}} </p>
 
                 <p> <i class="glyphicon glyphicon-envelope"></i>   Email:  {{contact.email}} </p>
 

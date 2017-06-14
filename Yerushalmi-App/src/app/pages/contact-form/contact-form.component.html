@@ -1,87 +1,63 @@
-<div class = "container">
-  <div >
-      <h3 style="text-align: center">New Contact</h3>
+<div class="container">
+  <div>
+    <input type="button" class="btn btn-danger" [routerLink]="['/Contact-List']" value = "Back to contacts" />
 
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2 well">
-          <form class="form-horizontal">
-            <!--
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="name">Full Name:</label>
-              <div class="col-sm-10">
-                <input type="name" class="form-control" id="name" placeholder="Enter first name"  name = "name" [(ngModel)]= 'contact.name'/>
-              </div>
-            </div>
-            -->
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="yearbook">Yearbook:</label>
-              <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="yearbook" placeholder="Enter yearbook"  name = "yearbook" [(ngModel)]= 'contact.yearbook'/>
-              </div>
-            </div>
+    <h3 style="text-align: center">New Contact</h3>
 
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="job">Job:</label>
-              <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="job" placeholder="Enter job"  name = "job" [(ngModel)]= 'contact.job'/>
-              </div>
-            </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 well">
+        <form>
+          <div class="form-group">
+            <label for="yearbook">Yearbook</label>
+            <input type="text" class="form-control" id="yearbook" placeholder="Enter yearbook" name="yearbook" [(ngModel)]='contact.yearbook'/>
+          </div>
+        
+          <div class="form-group">
+            <label for="job">Job</label>
+            <input type="text" class="form-control" id="job" placeholder="Enter job" name="job" [(ngModel)]='contact.job' />
+          </div>
 
-             <div class="form-group">
-              <label class="control-label col-sm-2" for="social">Social:</label>
-              <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="social" placeholder="Enter social"  name = "social" [(ngModel)]= 'contact.social'/>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="social">Social</label>
+            <input type="text" class="form-control" id="social" placeholder="Enter social" name="social" [(ngModel)]='contact.social'/>
+          </div>
 
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="hobbies">Hobbies:</label>
-              <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="hobbies" placeholder="Enter hobbies"  name = "hobbies" [(ngModel)]= 'contact.hobbies'/>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="hobbies">Hobbies</label>
+            <input type="text" class="form-control" id="hobbies" placeholder="Enter hobbies" name="hobbies" [(ngModel)]='contact.hobbies'/>
+          </div>
 
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="trip">Trip:</label>
-              <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="trip" placeholder="Enter trip"  name = "trip" [(ngModel)]= 'contact.trip'/>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="trip">Trip</label>
+            <input type="text" class="form-control" id="trip" placeholder="Enter trip" name="trip" [(ngModel)]='contact.trip' />
+          </div>
 
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="residence">Residence:</label>
-              <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="residence" placeholder="Enter residence"  name = "residence" [(ngModel)]= 'contact.residence'/>
-              </div>
-            </div>
-              
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="email">Email:</label>
-              <div class="col-sm-10"> 
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name = "email" [(ngModel)]= 'contact.email'/>
-              </div>
-            </div>
-          
-            <div class="form-group">
-              <label class="control-label col-sm-2" for="phone">Phone:</label>
-              <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="phone" placeholder="Enter phone" name = "phone" [(ngModel)]= 'contact.phone'/>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="residence">Residence</label>
+            <input type="text" class="form-control" id="residence" placeholder="Enter residence" name="residence" [(ngModel)]='contact.residence'/>
+          </div>
 
-            <div class="form-group">            
-              <label class ="control-label col-sm-2 custom-file-upload">Browse Photo
-                <input type="file" accept="image/*" (change) ="upload($event)" size="50"/>
-              </label>
-            </div>     
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]='contact.email' />
+          </div>
 
-            <a [routerLink]="['/Contact-List']"><input type="button" class="btn btn-primary" value = "Add Contact" (click) = "addContact()" /></a>
-            <button type="reset" class="btn btn-danger">Reset</button>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter phone" name="phone" [(ngModel)]='contact.phone' />
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label class="btn btn-primary control-label custom-file-upload">Browse Photo
+              <input type="file" accept="image/*" (change) ="upload($event)" size="50"/>
+            </label>
+          </div>
+
+          <button type="reset" class="btn btn-danger">Reset</button>
+          <input type="button" class="btn btn-success" [routerLink]="['/Contact-List']" value = "Add Contact" (click) = "addContact()" />
         </form>
       </div>
     </div>
   </div>
 </div>
-
-
-  

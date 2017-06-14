@@ -32,7 +32,6 @@ export class ContactsComponent implements OnInit {
   };
 
   getFilteredList(name): Observable<any[]> {
-    //if (name == undefined || name == "" || name == "(none)")
     if (!name)
       return this.db.list("contactList");
 

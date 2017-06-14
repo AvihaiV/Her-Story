@@ -1,13 +1,3 @@
 input[type="file"] {
     display: none;    
 }
-
-.custom-file-upload {
-    margin-left: 2%;
-    text-align: center;
-    padding: 10px 10px;
-    cursor: pointer;
-    background-color:greenyellow;
-    color: white;
-    border-radius: 5px;
-}
