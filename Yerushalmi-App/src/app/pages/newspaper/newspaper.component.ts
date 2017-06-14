@@ -13,10 +13,8 @@ export class NewspaperComponent implements OnInit {
   innerWidth: any;
   
   constructor() {
-    /*
-      this.innerHeight = (screen.availHeight) + "px";
-      this.innerWidth = (screen.availWidth) + "px";
-  */
+      this.innerHeight = (window.screen.height-230) + "px";
+      this.innerWidth = (window.screen.width-200) + "px";
   }
 
   ngOnInit() {
