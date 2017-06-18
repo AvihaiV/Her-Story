@@ -26,7 +26,7 @@ export class AppComponent {
         else {
           console.log("Successfully Logged in.");
           this.isLoggedIn = true;
-          this.router.navigate(['']);
+           this.router.navigate(['']);
         }
       });
   }

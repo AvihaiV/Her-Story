@@ -3,7 +3,13 @@
   <span class="sr-only">Error:</span> {{error}}
 </div>
 
-<div class="modal-dialog">
+<div *ngIf = "showSpinner">
+  <div class="cssload-wraper">
+    <div class="cssload-dots"></div>
+  </div>
+</div>
+
+<div *ngIf = "!showSpinner" class="modal-dialog">
   <div class="loginmodal-container">
     <div class="logo">
 		  <img src = "https://github.com/AvihaiV/Tene-Yerushalmi/blob/master/logo.png?raw=true" />  
@@ -12,44 +18,14 @@
 	  <br>
 
     <div class = "google">
-      <button class="login loginmodal-submit" (click)="loginWithGoogle()"><i class="fa fa-google" aria-hidden="true"></i>oogle</button>
+      <button class="login loginmodal-submit" (click)="loginWithGoogle()"><i style="margin-right:30px;" class="fa fa-google" aria-hidden="true"></i>Sign in with google</button>
     </div>
     <hr>
     
     <div class="facebook">
-      <button class="login loginmodal-submit" (click)="loginWithFacebook()"><i class="fa fa-facebook" aria-hidden="true"></i>acebook</button>
+      <button class="login loginmodal-submit" (click)="loginWithFacebook()"><i style="margin-right:30px;" class="fa fa-facebook" aria-hidden="true"></i>Sign in with facebook</button>
     </div>
     <hr>
  
   </div>
 </div>
-
-
-<!--
-<div class="modal-dialog">
-  <div class="loginmodal-container">
-    <div class="logo">
-      <img src="https://github.com/AvihaiV/Tene-Yerushalmi/blob/master/logo.png?raw=true" />
-    </div>
-
-    <div class="omb_login">
-      <div class="row omb_row-sm-offset-3 omb_socialButtons">
-
-        <button class="btn btn-lg btn-block omb_btn-google" (click)="loginWithGoogle()">
-          <i class="fa fa-google-plus visible-xs"></i>
-          <span class="hidden-xs">Google</span>
-        </button>
-        
-        <hr>
-        
-        <button class="btn btn-lg btn-block omb_btn-facebook" (click)="loginWithFacebook()">
-			    <i class="fa fa-facebook visible-xs"></i>
-			    <span class="hidden-xs">Facebook</span>
-        </button>
-
-      </div>
-    </div>
-  </div>
-</div>
-
--->

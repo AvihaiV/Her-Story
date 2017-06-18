@@ -1,3 +1,312 @@
+.cssload-wraper{
+	width:0px;
+	display:block;
+	margin: 238px auto;
+}
+	
+.cssload-dots {
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.cssload-dots:not(:required) {
+	overflow: hidden;
+	position: relative;
+	text-indent: -23748px;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: transparent;
+	border-radius: 100%;
+	box-shadow: rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+		-o-box-shadow: rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+		-ms-box-shadow: rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+		-webkit-box-shadow: rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+		-moz-box-shadow: rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	animation: cssload-dots 4.75s infinite ease-in-out;
+		-o-animation: cssload-dots 4.75s infinite ease-in-out;
+		-ms-animation: cssload-dots 4.75s infinite ease-in-out;
+		-webkit-animation: cssload-dots 4.75s infinite ease-in-out;
+		-moz-animation: cssload-dots 4.75s infinite ease-in-out;
+	transform-origin: 50% 50%;
+		-o-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+}
+
+
+
+@keyframes cssload-dots {
+	0% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	8.33% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	16.67% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px 33px 0 17px, rgb(255,204,102) 33px 33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	25% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	33.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee -33px -33px 0 17px;
+	}
+
+	41.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	50% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	58.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	66.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px -33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	75% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	83.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee 33px 33px 0 17px;
+	}
+
+	91.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	100% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+}
+
+@-o-keyframes cssload-dots {
+	0% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	8.33% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	16.67% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px 33px 0 17px, rgb(255,204,102) 33px 33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	25% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	33.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee -33px -33px 0 17px;
+	}
+
+	41.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	50% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	58.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	66.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px -33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	75% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	83.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee 33px 33px 0 17px;
+	}
+
+	91.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	100% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+}
+
+@-ms-keyframes cssload-dots {
+	0% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	8.33% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	16.67% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px 33px 0 17px, rgb(255,204,102) 33px 33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	25% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	33.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee -33px -33px 0 17px;
+	}
+
+	41.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	50% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	58.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	66.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px -33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	75% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	83.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee 33px 33px 0 17px;
+	}
+
+	91.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	100% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+}
+
+@-webkit-keyframes cssload-dots {
+	0% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	8.33% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	16.67% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px 33px 0 17px, rgb(255,204,102) 33px 33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	25% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	33.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee -33px -33px 0 17px;
+	}
+
+	41.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	50% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	58.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	66.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px -33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	75% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	83.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee 33px 33px 0 17px;
+	}
+
+	91.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	100% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+}
+
+@-moz-keyframes cssload-dots {
+	0% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) -33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	8.33% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px -33px 0 17px, rgb(255,204,102) 33px -33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	16.67% {
+		box-shadow: white 0 0 36px 0, rgb(255,136,102) 33px 33px 0 17px, rgb(255,204,102) 33px 33px 0 17px, rgb(102,221,119) 33px 33px 0 17px, rgb(68,170,238) -33px 33px 0 17px;
+	}
+
+	25% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	33.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee -33px -33px 0 17px;
+	}
+
+	41.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	50% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	58.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 -33px 33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	66.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 -33px -33px 0 17px, #66dd77 -33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	75% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px -33px 0 17px, #44aaee 33px -33px 0 17px;
+	}
+
+	83.33% {
+		box-shadow: white 0 0 36px 0, #ff8866 33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee 33px 33px 0 17px;
+	}
+
+	91.67% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px 33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+
+	100% {
+		box-shadow: white 0 0 36px 0, #ff8866 -33px -33px 0 17px, #ffcc66 33px -33px 0 17px, #66dd77 33px 33px 0 17px, #44aaee -33px 33px 0 17px;
+	}
+}
+
 .loginmodal-container {
   padding: 30px;
   max-width: 350px; 
@@ -24,7 +333,7 @@
 	opacity:0.9;
   background: #c32f10;
   font-family: roboto;
-  font-size: 21px;
+  font-size: 17px;
   border: 0px;
   border-radius: 5%;
   padding: 15px 0px;
@@ -43,7 +352,7 @@
 	opacity:0.9;
   background: #3b5998;
   font-family: roboto;
-  font-size: 21px;
+  font-size: 17px;
   border: 0px;
   border-radius: 5%;
   padding: 15px 0px;
@@ -56,46 +365,3 @@
 }
 
 
-/*
-.loginmodal-submit {
-  width: 100%;
-  border: 0px;
-  border-radius: 5%;
-  color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1);
-  background-color: #4d90fe;
-  padding: 17px 0px;
-  font-family: roboto;
-  font-size: 21px;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed));
-  cursor: pointer;
-}
-
-.loginmodal-submit:hover {
-  border: 0px;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  background-color: #357ae8;
-}
-
-*/
-
-/*
-.omb_login {
-  text-align: center;
-	line-height: 300%;
-}
-	
-.omb_login .omb_socialButtons button {
-  width: 100%;
-	color: white; 
-	opacity:0.9;
-}
-.omb_login .omb_socialButtons button:hover {
-  width: 100%;
-  color: white;
-	opacity:1;    	
-}
-.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
-.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
-
-*/

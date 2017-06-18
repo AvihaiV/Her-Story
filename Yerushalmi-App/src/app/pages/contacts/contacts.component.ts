@@ -13,7 +13,6 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
   styleUrls: ['./contacts.component.css']
 })
 
-
 export class ContactsComponent implements OnInit {
 
   public contacts: FirebaseListObservable<any>;
@@ -64,4 +63,5 @@ export class ContactsComponent implements OnInit {
     this.getFilteredNames("");
   }
 }
+
 

@@ -26,7 +26,6 @@ export class AF {
     this.item = this.db.list("items");
     this.news = this.db.list("newspaper");
     this.organization = this.db.list("organizationList");
-    this.logout();
   }
 
   addItem(item){

@@ -20,6 +20,7 @@ export class LoginComponent {
   loginWithGoogle() { 
     this.showSpinner = true;
     this.afService.loginWithGoogle().then((data) => {
+      this.showSpinner = false;
       this.afService.saveUserInfoFromForm(data.user.uid, data.user.displayName, data.user.email, data.user.photoURL);
       this.afService.addUserInfo(data.user);
        // Send them to the homepage if they are logged in
@@ -39,6 +40,7 @@ export class LoginComponent {
   loginWithFacebook() {    
     this.showSpinner = true;
     this.afService.loginWithFacebook().then((data) => {
+      this.showSpinner = false;
       this.afService.saveUserInfoFromForm(data.user.uid, data.user.displayName, data.user.email, data.user.photoURL);
       this.afService.addUserInfo(data.user);     
       // Send them to the homepage if they are logged in
