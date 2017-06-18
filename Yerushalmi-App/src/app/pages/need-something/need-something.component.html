@@ -5,18 +5,20 @@
     </div>
   </div>
     
-  <div class = "list-group" *ngFor = "let item of items | async">
-    <a class="list-group-item clearfix" [class.list-group-item-success] = "i == selectedRow">
-      <h4 class="list-group-item-heading">{{item.description}}</h4> 
-      <div *ngIf="item.photoURL">
-        <img [src]= "item.photoURL" class="img-thumbnail" width="150" height="150">
-      </div>
-    
-      <h6 class="list-group-item-text">
-        <br>Contact information: <br> {{item.author}} <br> {{item.email}} <br> {{item.phone}}
-      </h6>
+  <div class = "col-xs-12 col-sm-6 col-md-6">
+    <div class = "list-group" *ngFor = "let item of items | async">
+      <a class="list-group-item clearfix" [class.list-group-item-success] = "i == selectedRow">
+        <h4 class="list-group-item-heading">{{item.description}}</h4> 
+        <div *ngIf="item.photoURL">
+          <img [src]= "item.photoURL" class="img-thumbnail" width="150" height="150">
+        </div>
       
-      <div *ngIf = "item.author == afService.displayName" class = "pull-right" (click)="deleteItem(item.$key)" title = "Delete"><i class="fa fa-trash" aria-hidden="true"></i></div>
-    </a>
+        <h6 class="list-group-item-text">
+          <br>Contact information: <br> {{item.author}} <br> {{item.email}} <br> {{item.phone}}
+        </h6>
+        
+        <div *ngIf = "item.author == afService.displayName" class = "pull-right" (click)="deleteItem(item.$key)" title = "Delete"><i class="fa fa-trash" aria-hidden="true"></i></div>
+      </a>
+    </div>
   </div>
 </div>
