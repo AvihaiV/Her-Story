@@ -1,14 +1,14 @@
 <div class = "container">
   <div>
-  <input type="button" class="btn btn-danger" [routerLink]="['/Need-Something?']" value = "Back to need-something" />
+  <button class="btn btn-danger" [routerLink]="['/Need-Something?']"><i class="fa fa-reply" aria-hidden="true"></i> Back to need-something </button>
 
-    <h3 style="text-align: center">New Item</h3>
+    <h3 style="text-align: center">New Post</h3>
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2 well">
         <form>
           <div class = "from-group">
-            <label for = "description">Description</label>
+            <label for = "description">Post description</label>
             <input type = "text" class = "form-control" id = "description" placeholder="Enter Description" name = "description" [(ngModel)]= 'item.description'/>
           </div>
           <br>
@@ -17,7 +17,7 @@
               <legend>Contact Information:</legend>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="item.author" name="name" [(ngModel)]='item.author' disabled/>
+                  <input type="text" class="form-control" id="name" placeholder=item.author name="name" [(ngModel)]='item.author' disabled/>
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone</label>
@@ -37,7 +37,7 @@
           </div>     
 
            <button type="reset" class="btn btn-danger">Reset</button>
-          <input type="button" class="btn btn-success"  [routerLink]="['/Need-Something?']" value="Add Item" (click)="addItem()" />
+          <input type="button" class="btn btn-success"  [routerLink]="['/Need-Something?']" value="Add Post" (click)="addItem()" />
          
         </form>
       </div>
