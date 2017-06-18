@@ -6,7 +6,12 @@
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2 well">
-        <form class = "vertical">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="contact.name" name="name" [(ngModel)]='contact.name' disabled/>
+          </div>
+
           <div class="form-group">
             <label for="yearbook">Yearbook</label>
             <input type="text" class="form-control" id="yearbook" placeholder="Enter yearbook" name="yearbook" [(ngModel)]='contact.yearbook'/>

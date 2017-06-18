@@ -16,10 +16,7 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 export class ContactsComponent implements OnInit {
 
   public contacts: FirebaseListObservable<any>;
-  public filteredList: any;
-
-  nameList = [];
-  model1: any;
+  
   nameContact = ''; 
 
   constructor(public afService: AF, public db: AngularFireDatabase) {
