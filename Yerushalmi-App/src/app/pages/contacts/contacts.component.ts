@@ -20,29 +20,11 @@ export class ContactsComponent implements OnInit {
 
   nameList = [];
   model1: any;
-
+  nameContact = ''; 
 
   constructor(public afService: AF, public db: AngularFireDatabase) {
     this.contacts = this.afService.contact;
   }
-
-  getFilteredNames(name) {
-    this.filteredList = this.getFilteredList(name);
-  };
-
-  getFilteredList(name): Observable<any[]> {
-    if (!name)
-      return this.db.list("contactList");
-
-    else
-      return this.db.list('contactList').map(_user => _user.filter(user => user.name == name))
-  };
-
-
-  clearInput() {
-    this.model1 = "";
-    this.getFilteredNames("");
-  };
 
   //only user can delete himself
   deleteContact(key: string) {
@@ -52,16 +34,7 @@ export class ContactsComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-    firebase.database().ref("contactList/").orderByValue().on("value", (data) => {
-      data.forEach((snap) => {
-        if (snap.val().name != "" && snap.val().name != undefined)
-          this.nameList.push(snap.val().name);
-        return false;
-      });
-    });
-    this.getFilteredNames("");
-  }
+  ngOnInit() { }
 }
 
 

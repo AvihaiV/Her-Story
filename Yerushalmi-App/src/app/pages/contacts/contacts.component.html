@@ -7,15 +7,12 @@
 
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6">
-      <div ng2-auto-complete [source]="nameList" placeholder="Look for contact" (valueChanged)="getFilteredNames($event)">
-        <input id="filter" [ngModel]="model1" name="aaa" autocomplete="off" placeholder="Enter search name" />
-        <span class="glyphicon glyphicon-remove-circle" (click)="clearInput()"></span>
-      </div>
+      <input type = "text" class = "search" placeholder="Enter search name" [(ngModel)] = "nameContact"/>
 
-      <br/>
+      <p></p>
 
-      <div *ngFor="let contact of filteredList | async">
-        <div class="well well-sm">
+      <div *ngFor="let contact of contacts | async">
+        <div *ngIf = "((contact.name).toUpperCase()).search(nameContact.toUpperCase()) != -1" class="well well-sm">
           <div class="row">
             <div class="col-sm-6 col-md-4">
               <div *ngIf="contact.photoURL">
@@ -47,8 +44,8 @@
                 <p> <i class="glyphicon glyphicon-phone"></i> Phone: {{contact.phone}}
                 </p>
 
-                <div *ngIf="contact.name == afService.displayName" class="pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)"
-                  title="Delete"></div>
+                <div *ngIf="contact.name == afService.displayName" class="pull-right" (click)="deleteContact(contact.$key)"
+                  title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></div>
             </div>
           </div>
         </div>

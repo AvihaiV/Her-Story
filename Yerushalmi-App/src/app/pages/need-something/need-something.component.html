@@ -16,7 +16,7 @@
         <br>Contact information: <br> {{item.author}} <br> {{item.email}} <br> {{item.phone}}
       </h6>
       
-      <div *ngIf = "item.author == afService.displayName" class = "pull-right glyphicon glyphicon-trash" (click)="deleteItem(item.$key)" title = "Delete"></div>
+      <div *ngIf = "item.author == afService.displayName" class = "pull-right" (click)="deleteItem(item.$key)" title = "Delete"><i class="fa fa-trash" aria-hidden="true"></i></div>
     </a>
   </div>
 </div>
