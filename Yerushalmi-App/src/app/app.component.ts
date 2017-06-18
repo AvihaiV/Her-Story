@@ -24,9 +24,9 @@ export class AppComponent {
         }
 
         else {
+          this.afService.addUserInfo(auth);
           console.log("Successfully Logged in.");
           this.isLoggedIn = true;
-           this.router.navigate(['']);
         }
       });
   }
