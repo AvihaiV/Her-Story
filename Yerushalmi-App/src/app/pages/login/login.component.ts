@@ -13,10 +13,12 @@ import * as firebase from 'firebase';
 export class LoginComponent {
   public error: any;
   mail : any;
+  showSpinner : boolean = false;
 
   constructor(public afService: AF, private router: Router) {}
 
   loginWithGoogle() { 
+    this.showSpinner = true;
     this.afService.loginWithGoogle().then((data) => {
       this.afService.saveUserInfoFromForm(data.user.uid, data.user.displayName, data.user.email, data.user.photoURL);
       this.afService.addUserInfo(data.user);
@@ -26,6 +28,7 @@ export class LoginComponent {
 
     .catch((error: any) => {
       if (error) {
+        this.showSpinner = false;
         this.error = error;
         console.log(this.error);
       }
@@ -34,6 +37,7 @@ export class LoginComponent {
 
 
   loginWithFacebook() {    
+    this.showSpinner = true;
     this.afService.loginWithFacebook().then((data) => {
       this.afService.saveUserInfoFromForm(data.user.uid, data.user.displayName, data.user.email, data.user.photoURL);
       this.afService.addUserInfo(data.user);     
@@ -43,11 +47,13 @@ export class LoginComponent {
 
     .catch((error: any) => {
       if (error) {
+        this.showSpinner = false;
         this.error = error;
         console.log(this.error);
       }
     });
   }
 }
+
 
 

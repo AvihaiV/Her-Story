@@ -1,13 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-lg-6 col-lg-offset-3">
       <a [routerLink]="['/contact-form']"><button class = "btn btn-success addcmd">Add Yourself :)</button></a>
     </div>
   </div>
 
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-6">
-<!--      <label for="filter">Search by name:</label>   -->
       <div ng2-auto-complete [source]="nameList" placeholder="Look for contact" (valueChanged)="getFilteredNames($event)">
         <input id="filter" [ngModel]="model1" name="aaa" autocomplete="off" placeholder="Enter search name" />
         <span class="glyphicon glyphicon-remove-circle" (click)="clearInput()"></span>
@@ -15,41 +14,43 @@
       
       <br/>
 
-      <div *ngFor="let contact of filteredList | async">
-        <div class="well well-sm">
-          <div class="row">
-            <div class="col-sm-6 col-md-4">
-              <div *ngIf="contact.photoURL">
-                <img [src]="contact.photoURL" class="img-rounded img-responsive" width="200" height="200" />
+      <div class = "vertical">
+        <div *ngFor="let contact of filteredList | async">
+          <div class="well well-sm">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div *ngIf="contact.photoURL">
+                  <img [src]="contact.photoURL" class="img-rounded img-responsive" width="200" height="200" />
+                </div>
+
+                <div *ngIf="!contact.photoURL">
+                  <img src="https://www.drupal.org/files/profile_default.jpg" class="img-rounded img-responsive" width="200" height="200"/>
+                </div>
               </div>
 
-              <div *ngIf="!contact.photoURL">
-                <img src="https://www.drupal.org/files/profile_default.jpg" class="img-rounded img-responsive" width="200" height="200"/>
+              <div class="col-sm-6 col-md-8">
+                <h4>{{contact.name}}</h4>
+                <p>
+                  <p> <i class="glyphicon glyphicon-bookmark"></i>  Yearbook:  {{contact.yearbook}} </p>
+                  
+                  <p> <i class="glyphicon glyphicon-briefcase"></i>   Job:  {{contact.job}} </p>
+              
+                  <p> <i class="glyphicon glyphicon-thumbs-up"></i>   Social initiative:  {{contact.social}} </p>
+                  
+                  <p> <i class="glyphicon glyphicon-heart"></i>   Hobbies:  {{contact.hobbies}} </p>
+                  
+                  <p> <i class="glyphicon glyphicon-plane"></i>   Trip:  {{contact.trip}} </p>
+
+                  <p> <i class="glyphicon glyphicon-map-marker"></i>   Residence:  {{contact.residence}} </p>
+
+                  <p> <i class="glyphicon glyphicon-envelope"></i>   Email:  {{contact.email}} </p>
+
+                  <p> <i class="glyphicon glyphicon-phone"></i>   Phone:  {{contact.phone}}
+                </p>
+
+                <div *ngIf="contact.name == afService.displayName" class="pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)"
+                  title="Delete"></div>
               </div>
-            </div>
-
-            <div class="col-sm-6 col-md-8">
-              <h4>{{contact.name}}</h4>
-              <p>
-                <p> <i class="glyphicon glyphicon-bookmark"></i>  Yearbook:  {{contact.yearbook}} </p>
-                
-                <p> <i class="glyphicon glyphicon-briefcase"></i>   Job:  {{contact.job}} </p>
-             
-                <p> <i class="glyphicon glyphicon-thumbs-up"></i>   Social initiative:  {{contact.social}} </p>
-                
-                <p> <i class="glyphicon glyphicon-heart"></i>   Hobbies:  {{contact.hobbies}} </p>
-                
-                <p> <i class="glyphicon glyphicon-plane"></i>   Trip:  {{contact.trip}} </p>
-
-                <p> <i class="glyphicon glyphicon-map-marker"></i>   Residence:  {{contact.residence}} </p>
-
-                <p> <i class="glyphicon glyphicon-envelope"></i>   Email:  {{contact.email}} </p>
-
-                <p> <i class="glyphicon glyphicon-phone"></i>   Phone:  {{contact.phone}}
-              </p>
-
-              <div *ngIf="contact.name == afService.displayName" class="pull-right glyphicon glyphicon-trash" (click)="deleteContact(contact.$key)"
-                title="Delete"></div>
             </div>
           </div>
         </div>

@@ -11,3 +11,11 @@
 .nav {
   cursor: pointer;
 }
+
+.home {
+  margin-top: 7px;
+}
+
+.dropdown {
+  margin-right: 4px;
+}

@@ -2,14 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="navbar-header col-xs-6">       
-        <a *ngIf = "isLoggedIn" class="navbar-brand glyphicon glyphicon-chevron-left" [routerLink] = "['']">Home</a>
+        <a *ngIf = "isLoggedIn" class="navbar-brand home" [routerLink] = "['']"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
         <a *ngIf = "!isLoggedIn" class="navbar-brand">Yerushalmi</a>
       </div>
 
       <div *ngIf="isLoggedIn">
         <div class="navbar-header col-xs-6">   
-          <div class="dropdown nav navbar-nav navbar-right" dropdown [dropdownToggle]="true">
-              <div class="btn btn-default navbar-btn" dropdown-open><i class="glyphicon glyphicon-user"></i>
+          <div class="dropdown nav navbar-nav navbar-right pull-right" dropdown [dropdownToggle]="true">
+              <div class="btn btn-default navbar-btn" dropdown-open><i class="fa fa-user-o" aria-hidden="true"></i>
                   <span class="caret"></span></div>                  
               <ul class="dropdown-menu">
                 <li>Sign in as:<br><strong>{{afService.displayName}}</strong></li><br>
