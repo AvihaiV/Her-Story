@@ -54,11 +54,11 @@
           <br>
 
           <div class="form-group">
-            <button class="btn btn-primary control-label custom-file-upload">
-              <i class="fa fa-picture-o" style="margin-right: 5px;" aria-hidden="true"></i>
+            <label class="btn btn-primary control-label custom-file-upload">
+              <i class="fa fa-picture-o" style="margin-right: 5px;" aria-hidden="true"></i> 
               Upload Photo
               <input type="file" accept="image/*" (change) ="upload($event)" size="50"/>
-            </button>
+            </label>
           </div>
 
           <div *ngIf = "showSpinner">
