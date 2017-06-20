@@ -47,7 +47,7 @@
           </div>
 
           <button class="btn btn-danger" (click) = "resetForm()"><i class="fa fa-refresh" style="margin-right: 5px;" aria-hidden="true"></i>Reset</button>
-          <button class="btn btn-success" (click)="addItem()" [routerLink]="['/Need-Something?']"><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Post</button>
+          <a [routerLink]="['/Need-Something?']"><button class="btn btn-success" (click)="addItem()" ><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Post</button></a>
         </form>
       </div>
     </div>

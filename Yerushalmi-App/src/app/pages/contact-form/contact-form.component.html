@@ -70,7 +70,7 @@
           </div>
 
           <button class="btn btn-danger"  (click) = "resetForm()"><i class="fa fa-refresh" style="margin-right: 5px;" aria-hidden="true"></i>Reset</button>
-          <button class="btn btn-success" (click) = "addContact()" [routerLink]="['/Contact-List']"><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Contact</button>
+          <a [routerLink]="['/Contact-List']"><button class="btn btn-success" (click) = "addContact()" ><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Contact</button></a>
         </form>
       </div>
     </div>
