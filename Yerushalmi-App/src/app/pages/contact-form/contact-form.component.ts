@@ -20,6 +20,7 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit() { 
     this.contact = { name: "", job: "" , hobbies: "" ,photoURL: "", phone: "", email: "", residence: "", trip: "", social: "", yearbook: "" };
+    
     firebase.database().ref('registeredUsers/' + firebase.auth().currentUser.uid).once('value').then((snapshot) => {
         this.contact.name = snapshot.val().name;
         this.contact.email = snapshot.val().email;        
