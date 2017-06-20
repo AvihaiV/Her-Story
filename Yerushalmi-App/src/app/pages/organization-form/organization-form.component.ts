@@ -10,8 +10,7 @@ import * as firebase from 'firebase';
 })
 export class OrganizationFormComponent implements OnInit {
 
-   public organization : organization;
-
+  public organization : organization;
   targetRef:any;
   storageRef:any;
 
@@ -26,6 +25,16 @@ export class OrganizationFormComponent implements OnInit {
   //add organization to database
   addOrganization(){
     this.afService.addOrganization(this.organization);
+  }
+
+  //reset the form except the name
+  resetForm(){
+    if(confirm("Are You sure you want to reset the form?"))
+    {
+      this.organization.name = "";
+      this.organization.contact = "";
+      this.organization.phone = "";
+    }
   }
 }
 

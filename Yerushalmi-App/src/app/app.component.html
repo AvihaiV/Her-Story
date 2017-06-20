@@ -8,18 +8,8 @@
 
       <div *ngIf="isLoggedIn">
         <div class="navbar-header col-xs-6">   
-          <!--
           <div class="dropdown nav navbar-nav navbar-right pull-right" dropdown [dropdownToggle]="true">
-              <div class="btn btn-default navbar-btn" dropdown-open><i class="fa fa-user-o" aria-hidden="true"></i>
-                  <span class="caret"></span></div>                  
-              <ul class="dropdown-menu">
-                <li>Sign in as:<br><strong>{{afService.displayName}}</strong></li><br>
-                <li><strong><a (click)="logout()">Logout</a></strong></li>
-              </ul>
-          </div>
-          -->
-          <div class="dropdown nav navbar-nav navbar-right pull-right" dropdown [dropdownToggle]="true">
-              <div dropdown-open><i class="fa fa-user-circle" aria-hidden="true"></i>
+              <div dropdown-open><i class="fa fa-user-circle" style="font-size: 20px" aria-hidden="true"></i>
                   <span class="caret"></span></div>                  
               <ul class="dropdown-menu">
                 <li>Sign in as:<br><strong>{{afService.displayName}}</strong></li><br>

@@ -1,6 +1,6 @@
 <div class = "container">
   <div>
-  <button class="btn btn-danger" [routerLink]="['/Need-Something?']"><i class="fa fa-reply" aria-hidden="true"></i> Back to need-something </button>
+  <button class="btn btn-danger" [routerLink]="['/Need-Something?']"><i class="fa fa-reply" style="margin-right: 5px;" aria-hidden="true"></i>Back to need-something </button>
 
     <h3 style="text-align: center">New Post</h3>
 
@@ -31,14 +31,23 @@
           </fieldset>
           
           <div class="form-group">            
-            <label class ="btn btn-primary control-label custom-file-upload">Browse Photo
+            <label class ="btn btn-primary control-label custom-file-upload">
+              <i class="fa fa-picture-o" style="margin-right: 5px;" aria-hidden="true"></i>
+              Upload Photo
               <input type="file" accept="image/*" (change) ="upload($event)" size="50"/>
             </label>
           </div>     
 
-           <button type="reset" class="btn btn-danger">Reset</button>
-          <input type="button" class="btn btn-success"  [routerLink]="['/Need-Something?']" value="Add Post" (click)="addItem()" />
-         
+          <div *ngIf = "showSpinner">
+            <div class = "spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+
+          <button class="btn btn-danger" (click) = "resetForm()"><i class="fa fa-refresh" style="margin-right: 5px;" aria-hidden="true"></i>Reset</button>
+          <button class="btn btn-success" (click)="addItem()" [routerLink]="['/Need-Something?']"><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Post</button>
         </form>
       </div>
     </div>

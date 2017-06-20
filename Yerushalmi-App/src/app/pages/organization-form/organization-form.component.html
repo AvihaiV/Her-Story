@@ -1,6 +1,6 @@
 <div class = "container">
   <div>
-    <button class="btn btn-danger" [routerLink]="['/Organization-List']"><i class="fa fa-reply" aria-hidden="true"></i> Back to organizations </button>
+    <button class="btn btn-danger" [routerLink]="['/Organization-List']"><i class="fa fa-reply" style="margin-right: 5px;" aria-hidden="true"></i>Back to organizations </button>
 
     <h3 style="text-align: center">New Organization</h3>
 
@@ -8,7 +8,7 @@
       <div class="col-md-8 col-md-offset-2 well">
         <form>
           <div class = "from-group">
-            <label for = "name">Name</label>
+            <label for = "name">Organization's Name</label>
             <input type = "text" class = "form-control" id = "name" placeholder="Enter Name" name = "name" [(ngModel)]= 'organization.name'/>
           </div>
           <br>
@@ -25,8 +25,8 @@
           </div>
           <br>
 
-          <button type="reset" class="btn btn-danger">Reset</button>
-          <input type="button" class="btn btn-success"  [routerLink]="['/Organization-List']" value="Add Organization" (click)="addOrganization()" />
+          <button class="btn btn-danger" (click) = "resetForm()"><i class="fa fa-refresh" style="margin-right: 5px;" aria-hidden="true"></i>Reset</button>
+          <button class="btn btn-success"  (click)="addOrganization()" [routerLink]="['/Organization-List']"><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Organization </button>
         </form>
       </div>
     </div>

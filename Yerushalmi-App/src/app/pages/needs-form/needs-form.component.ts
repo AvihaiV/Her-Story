@@ -11,9 +11,9 @@ import * as firebase from 'firebase';
 export class NeedsFormComponent implements OnInit {
   
   public item : item;
-
   targetRef:any;
-  storageRef:any;
+  storageRef:any;  
+  showSpinner : boolean = false;
 
   constructor(public afService : AF) { 
       this.storageRef = firebase.storage().ref();
@@ -21,10 +21,10 @@ export class NeedsFormComponent implements OnInit {
 
   ngOnInit() {
     this.item = { description: "", author : "" ,photoURL : "", phone: "", email: ""};
-    firebase.database().ref('/registeredUsers/' + firebase.auth().currentUser.uid).once('value').then((snapshot) => {
-        this.item.author = snapshot.val().name;
-        this.item.email = snapshot.val().email;        
-    });
+    
+    this.item.author = this.afService.displayName;
+    this.item.email = this.afService.email;        
+   
   }
 
   //add item to database
@@ -32,9 +32,19 @@ export class NeedsFormComponent implements OnInit {
     this.afService.addItem(this.item);
   }
 
+  //reset the form except the name
+  resetForm(){
+    if(confirm("Are You sure you want to reset the form?"))
+    {
+      this.item.description = "";
+      this.item.photoURL = "";
+      this.item.phone = "";
+    }
+  }
+
   //setup path to upload
   upload(event:any){
-    alert("Please wait while uploading!");
+    this.showSpinner = true;
     let targetFile = event.srcElement.files[0];
     let fbsPath = 'images/items/' + targetFile.name;
     this.uploadFile(fbsPath,targetFile);
@@ -58,7 +68,8 @@ export class NeedsFormComponent implements OnInit {
             this.item.photoURL=downloadUrl;
             console.log(downloadUrl);
             res(downloadUrl);  
-            alert("Photo uploaded!");
+            this.showSpinner = false; 
+            alert("Photo uploaded successfully"); 
           }
         );
       })      

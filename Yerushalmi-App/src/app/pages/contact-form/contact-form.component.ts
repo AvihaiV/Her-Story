@@ -34,14 +34,17 @@ export class ContactFormComponent implements OnInit {
 
   //reset the form except the name
   resetForm(){
-    this.contact.job = "";
-    this.contact.hobbies = "";
-    this.contact.photoURL = "";
-    this.contact.phone = "";
-    this.contact.residence = "";
-    this.contact.trip = "";
-    this.contact.social = "";
-    this.contact.yearbook = "";
+    if(confirm("Are You sure you want to reset the form?"))
+    {
+      this.contact.job = "";
+      this.contact.hobbies = "";
+      this.contact.photoURL = "";
+      this.contact.phone = "";
+      this.contact.residence = "";
+      this.contact.trip = "";
+      this.contact.social = "";
+      this.contact.yearbook = "";
+    }
   }
 
   //setup path to upload
@@ -70,7 +73,8 @@ export class ContactFormComponent implements OnInit {
             this.contact.photoURL=downloadUrl;
             console.log(downloadUrl);
             res(downloadUrl); 
-            this.showSpinner = false; 
+            this.showSpinner = false;
+            alert("Photo uploaded successfully"); 
           }
         );
       })      
