@@ -23,7 +23,7 @@
           </div>
 
           <div class="form-group">
-            <label for="social">Social</label>
+            <label for="social">Social initiative</label>
             <input type="text" class="form-control" id="social" placeholder="Enter social" name="social" [(ngModel)]='contact.social'/>
           </div>
 
@@ -59,7 +59,15 @@
             </label>
           </div>
 
-          <button type="reset" class="btn btn-danger">Reset</button>
+          <div *ngIf = "showSpinner">
+            <div class = "spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+
+          <input type="button" class="btn btn-danger" value = "Reset" (click) = "resetForm()" />
           <input type="button" class="btn btn-success" [routerLink]="['/Contact-List']" value = "Add Contact" (click) = "addContact()" />
         </form>
       </div>

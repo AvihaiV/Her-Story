@@ -13,6 +13,7 @@ export class ContactFormComponent implements OnInit {
   public contact : contact;
   targetRef: any;
   storageRef: any;
+  showSpinner : boolean = false;
 
   constructor(public afService : AF) { 
      this.storageRef = firebase.storage().ref();
@@ -21,10 +22,9 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() { 
     this.contact = { name: "", job: "" , hobbies: "" ,photoURL: "", phone: "", email: "", residence: "", trip: "", social: "", yearbook: "" };
     
-    firebase.database().ref('registeredUsers/' + firebase.auth().currentUser.uid).once('value').then((snapshot) => {
-        this.contact.name = snapshot.val().name;
-        this.contact.email = snapshot.val().email;        
-    });
+    this.contact.name = this.afService.displayName;
+    this.contact.email = this.afService.email;        
+
   }
 
   //add contact to database
@@ -32,9 +32,21 @@ export class ContactFormComponent implements OnInit {
     this.afService.addContact(this.contact);
   }
 
+  //reset the form except the name
+  resetForm(){
+    this.contact.job = "";
+    this.contact.hobbies = "";
+    this.contact.photoURL = "";
+    this.contact.phone = "";
+    this.contact.residence = "";
+    this.contact.trip = "";
+    this.contact.social = "";
+    this.contact.yearbook = "";
+  }
+
   //setup path to upload
   upload(event:any){
-    alert("Please wait while uploading!");
+    this.showSpinner = true;
     let targetFile = event.srcElement.files[0];
     let fbsPath = 'images/contacts/' + targetFile.name;
     this.uploadFile(fbsPath,targetFile);
@@ -57,8 +69,8 @@ export class ContactFormComponent implements OnInit {
             let downloadUrl = task.snapshot.downloadURL;
             this.contact.photoURL=downloadUrl;
             console.log(downloadUrl);
-            res(downloadUrl);  
-            alert("Photo uploaded!");
+            res(downloadUrl); 
+            this.showSpinner = false; 
           }
         );
       })      
