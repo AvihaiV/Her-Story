@@ -5,7 +5,7 @@ import { AF } from "../../providers/af";
 import { DialogService } from "ng2-bootstrap-modal";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
+import { Ng2AutoCompleteModule } from "ng2-auto-complete";
 
 @Component({
   selector: 'app-contacts',
@@ -16,8 +16,7 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 export class ContactsComponent implements OnInit {
 
   public contacts: FirebaseListObservable<any>;
-  
-  nameContact = ''; 
+  nameContact= ''; 
 
   constructor(public afService: AF, public db: AngularFireDatabase) {
     this.contacts = this.afService.contact;

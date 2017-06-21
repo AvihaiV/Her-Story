@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AF } from '../../providers/af';
 import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database";
-import * as firebase from 'firebase';
+import * as firebase from "firebase";
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.css']
+  styleUrls: ["./contact-form.component.css"]
 })
 export class ContactFormComponent implements OnInit {
 
@@ -15,7 +15,7 @@ export class ContactFormComponent implements OnInit {
   storageRef: any;
   showSpinner : boolean = false;
 
-  constructor(public afService : AF) { 
+  constructor(public afService: AF){ 
      this.storageRef = firebase.storage().ref();
   }
 
@@ -34,8 +34,7 @@ export class ContactFormComponent implements OnInit {
 
   //reset the form except the name
   resetForm(){
-    if(confirm("Are You sure you want to reset the form?"))
-    {
+    if(confirm("Are You sure you want to reset the form?")) {
       this.contact.job = "";
       this.contact.hobbies = "";
       this.contact.photoURL = "";
@@ -51,7 +50,7 @@ export class ContactFormComponent implements OnInit {
   upload(event:any){
     this.showSpinner = true;
     let targetFile = event.srcElement.files[0];
-    let fbsPath = 'images/contacts/' + targetFile.name;
+    let fbsPath = "images/contacts/" + targetFile.name;
     this.uploadFile(fbsPath,targetFile);
   }
 
@@ -60,7 +59,7 @@ export class ContactFormComponent implements OnInit {
       let promise = new Promise((res,rej) => {
         this.targetRef =this.storageRef.child(fbsPath);
         let task=this.targetRef.put(targetFile);
-        task.on('state_changed',
+        task.on("state_changed",
           (snapshot:any) => {
             console.log(snapshot.state);
           },

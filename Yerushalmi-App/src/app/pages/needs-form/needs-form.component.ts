@@ -15,7 +15,7 @@ export class NeedsFormComponent implements OnInit {
   storageRef:any;  
   showSpinner : boolean = false;
 
-  constructor(public afService : AF) { 
+  constructor(public afService : AF){ 
       this.storageRef = firebase.storage().ref();
   }
 
@@ -46,7 +46,7 @@ export class NeedsFormComponent implements OnInit {
     this.showSpinner = true;
     let targetFile = event.srcElement.files[0];
     let fbsPath = 'images/items/' + targetFile.name;
-    this.uploadFile(fbsPath,targetFile);
+    this.uploadFile(fbsPath, targetFile);
   }
 
   // upload to firebase
@@ -67,7 +67,7 @@ export class NeedsFormComponent implements OnInit {
             this.item.photoURL=downloadUrl;
             console.log(downloadUrl);
             res(downloadUrl);  
-            this.showSpinner = false; 
+            this.showSpinner= false; 
             alert("Photo uploaded successfully"); 
           }
         );

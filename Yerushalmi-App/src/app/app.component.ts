@@ -12,7 +12,7 @@ import * as firebase from 'firebase';
 export class AppComponent {
   public isLoggedIn: boolean;  
 
-  constructor(public afService: AF, private router: Router) {  
+  constructor(public afService: AF, private router: Router){  
     // This asynchronously checks if our user is logged it and will automatically
     // redirect them to the Login page when the status changes.    
     this.afService.userLog().subscribe(

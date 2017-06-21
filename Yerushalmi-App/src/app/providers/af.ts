@@ -9,7 +9,7 @@ import {FirebaseObjectFactoryOpts} from 'angularfire2/interfaces';
 export class AF {
   public displayName: string;
   public email: string;
-  public photoURL : any;
+  public photoURL: any;
   public item: FirebaseListObservable<any>;
   public news: FirebaseListObservable<any>;
   public contact: FirebaseListObservable<any>;
@@ -17,8 +17,8 @@ export class AF {
   public registeredUsers: FirebaseListObservable<any>;
 
   public OK_key:string;
-  public storageRef : any;
-  public targetRef : any;
+  public storageRef: any;
+  public targetRef: any;
 
   constructor(public af: AngularFireAuth, public db: AngularFireDatabase) {
     this.targetRef = firebase.storage().ref();
@@ -29,7 +29,7 @@ export class AF {
     this.logout();
   }
 
-  addItem(item){
+  addItem(item) {
     this.item.push({
       description: item.description,
       author : item.author,

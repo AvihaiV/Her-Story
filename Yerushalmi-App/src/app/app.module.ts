@@ -5,20 +5,20 @@ import { HttpModule } from "@angular/http";
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuthModule } from "angularfire2/auth";
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
-import { NeedSomethingComponent } from './pages/need-something/need-something.component';
+import { NeedSomethingComponent } from "./pages/need-something/need-something.component";
 import { NewspaperComponent } from './pages/newspaper/newspaper.component';
 import { OrganizationListComponent } from './pages/organization-list/organization-list.component';
 import * as firebase from 'firebase/app';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { BootstrapModalModule } from 'ng2-bootstrap-modal/dist';
 import { Ng2AutoCompleteModule } from 'ng2-auto-complete/dist';
-import { DatePickerModule } from 'ng2-datepicker';
-import { DropdownModule } from 'ng2-dropdown';
+import { DatePickerModule } from "ng2-datepicker";
+import { DropdownModule } from "ng2-dropdown";
 import { LoginComponent } from './pages/login/login.component';
 import { AF } from "./providers/af";
 import { NeedsFormComponent } from './pages/needs-form/needs-form.component';
@@ -35,8 +35,8 @@ const routes: Routes = [
    { path: 'Need-Something?', component: NeedSomethingComponent, pathMatch: 'full'},
    { path: 'contact-form', component: ContactFormComponent, pathMatch: 'full'},
    { path: 'login', component: LoginComponent, pathMatch: 'full'},
-   { path: 'needs-form', component: NeedsFormComponent, pathMatch: 'full'},
-   { path: 'organization-form', component: OrganizationFormComponent, pathMatch: 'full'}
+   { path: "needs-form", component: NeedsFormComponent, pathMatch: "full"},
+   { path: "organization-form", component: OrganizationFormComponent, pathMatch: "full"}
 ];
 
 export const firebaseConfig = {
