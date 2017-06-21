@@ -3,7 +3,7 @@
 
 module.exports = function (config) {
   config.set({
-    basePath: '',
+    basePath: "",
     frameworks: ["jasmine", "@angular/cli"],
     plugins: [
       require("karma-jasmine"),
@@ -25,7 +25,7 @@ module.exports = function (config) {
       "text/x-typescript": ["ts","tsx"]
     },
     coverageIstanbulReporter: {
-      reports: [ 'html', 'lcovonly' ],
+      reports: [ "html", "lcovonly"],
       fixWebpackSourcePaths: true
     },
     angularCli: {

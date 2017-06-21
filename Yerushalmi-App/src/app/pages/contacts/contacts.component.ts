@@ -9,7 +9,7 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 
 @Component({
   selector: 'app-contacts',
-  templateUrl: './contacts.component.html',
+  templateUrl: "./contacts.component.html",
   styleUrls: ['./contacts.component.css']
 })
 

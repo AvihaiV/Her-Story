@@ -27,22 +27,21 @@ export class NeedsFormComponent implements OnInit {
    
   }
 
-  //add item to database
+  // add item to database
   addItem(){
     this.afService.addItem(this.item);
   }
 
-  //reset the form except the name
+  // reset the form except the name
   resetForm(){
-    if(confirm("Are You sure you want to reset the form?"))
-    {
+    if(confirm("Are You sure you want to reset the form?")) {
       this.item.description = "";
       this.item.photoURL = "";
       this.item.phone = "";
     }
   }
 
-  //setup path to upload
+  // setup path to upload
   upload(event:any){
     this.showSpinner = true;
     let targetFile = event.srcElement.files[0];
@@ -50,7 +49,7 @@ export class NeedsFormComponent implements OnInit {
     this.uploadFile(fbsPath,targetFile);
   }
 
-  //upload to firebase
+  // upload to firebase
   uploadFile(fbsPath,targetFile) {
       let promise = new Promise((res,rej) => {
         this.targetRef =this.storageRef.child(fbsPath);
@@ -77,7 +76,7 @@ export class NeedsFormComponent implements OnInit {
     }
 }
 
-//item struct
+// item struct
 export class item{
     description : String;
     author : String;

@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import {BrowserModule, DomSanitizer,SafeResourceUrl} from '@angular/platform-browser'
 
 @Component({
-  selector: 'app-newspaper',
+  selector: "app-newspaper",
   templateUrl: './newspaper.component.html',
   styleUrls: ['./newspaper.component.css']
 })

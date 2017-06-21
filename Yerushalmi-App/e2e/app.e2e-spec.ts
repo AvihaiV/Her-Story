@@ -1,6 +1,6 @@
 import { YerushalmiAppPage } from './app.po';
 
-describe('yerushalmi-app App', () => {
+describe("yerushalmi-app App", () => {
   let page: YerushalmiAppPage;
 
   beforeEach(() => {
