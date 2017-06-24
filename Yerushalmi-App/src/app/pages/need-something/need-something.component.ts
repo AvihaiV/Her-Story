@@ -11,9 +11,16 @@ import { AF } from "../../providers/af";
 export class NeedSomethingComponent implements OnInit {
  
   public items : FirebaseListObservable<any>;
+//  showSppiner : boolean;
 
   constructor(public afService : AF) {     
     this.items = this.afService.item;
+/*
+    this.showSppiner = true;
+    this.items.subscribe(() => {
+      this.showSppiner = false;
+    })
+*/
   }
 
   //only user can delete himself

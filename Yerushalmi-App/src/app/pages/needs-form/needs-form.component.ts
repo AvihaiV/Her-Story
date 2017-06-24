@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AF } from '../../providers/af';
 import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database";
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-needs-form',
@@ -15,7 +16,7 @@ export class NeedsFormComponent implements OnInit {
   storageRef:any;  
   showSpinner : boolean = false;
 
-  constructor(public afService : AF){ 
+  constructor(public afService : AF, private router: Router){ 
       this.storageRef = firebase.storage().ref();
   }
 
@@ -29,7 +30,14 @@ export class NeedsFormComponent implements OnInit {
 
   // add item to database
   addItem(){
-    this.afService.addItem(this.item);
+    if(this.item.description == "")
+      alert("Description required");
+    
+    else 
+    {
+      this.afService.addItem(this.item);
+      this.router.navigate(['Need-Something?']);
+    }
   }
 
   // reset the form except the name

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AF } from '../../providers/af';
 import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database";
 import * as firebase from 'firebase';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-organization-form',
@@ -14,7 +15,7 @@ export class OrganizationFormComponent implements OnInit {
   targetRef:any;
   storageRef:any;
 
-  constructor(public afService : AF) { 
+  constructor(public afService : AF, private router: Router) { 
       this.storageRef = firebase.storage().ref();
   }
 
@@ -24,7 +25,14 @@ export class OrganizationFormComponent implements OnInit {
 
   //add organization to database
   addOrganization(){
-    this.afService.addOrganization(this.organization);
+    if(this.organization.name == "" || this.organization.contact == "")
+      alert("Organization's name and contact required");
+    
+    else 
+    {
+      this.afService.addOrganization(this.organization);
+      this.router.navigate(['Organization-List']);
+    }
   }
 
   //reset the form except the name

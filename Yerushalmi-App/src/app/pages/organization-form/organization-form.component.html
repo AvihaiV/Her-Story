@@ -9,13 +9,13 @@
         <form>
           <div class = "from-group">
             <label for = "name">Organization's Name</label>
-            <input type = "text" class = "form-control" id = "name" placeholder="Enter Name" name = "name" [(ngModel)]= 'organization.name' required/>
+            <input type = "text" required class = "form-control" id = "name" placeholder="Enter Name" name = "name" [(ngModel)]= 'organization.name' required/>
           </div>
           <br>
 
           <div class = "from-group">
             <label for = "contact">Contact</label>
-            <input type = "text" class = "form-control" id = "contact" placeholder="Enter Contact" name = "contact" [(ngModel)]= 'organization.contact' required/>
+            <input type = "text" required class = "form-control" id = "contact" placeholder="Enter Contact" name = "contact" [(ngModel)]= 'organization.contact' required/>
           </div>
           <br>
 
@@ -26,7 +26,7 @@
           <br>
 
           <button class="btn btn-danger" (click) = "resetForm()"><i class="fa fa-refresh" style="margin-right: 5px;" aria-hidden="true"></i>Reset</button>
-          <a [routerLink]="['/Organization-List']"><button class="btn btn-success" (click)="addOrganization()"><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Organization </button></a>
+          <button class="btn btn-success" type = "submit" (click) = "addOrganization()"><i class="fa fa-check" style="margin-right: 5px;" aria-hidden="true"></i>Add Organization </button>
         </form>
       </div>
     </div>
