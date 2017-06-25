@@ -16,7 +16,6 @@ Helping the Alumni of HaYerushalmit stay in touch with one another.
 | Recommended IDE | [VSCode](https://code.visualstudio.com) |
 | Group Chat | [![Join the chat at https://gitter.im/jce-il/project-template](https://badges.gitter.im/jce-il/project-template.svg)](https://gitter.im/Tene-Yerushalmi/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link) |
 | Github Issues | [![GitHub issues](https://img.shields.io/github/issues/AvihaiV/Tene-Yerushalmi.svg?style=flat)](https://github.com/AvihaiV/Her-Story/issues) |
-| Code-Quality | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f67e98a79321499385a8d4aebee8431d)](https://www.codacy.com/app/AvihaiV/Tene-Yerushalmi?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AvihaiV/Tene-Yerushalmi&amp;utm_campaign=Badge_Grade) |
 
 
 
